@@ -1,0 +1,474 @@
+/* Estilos específicos para páginas de nível */
+
+.nivel-header {
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.nivel-1-header {
+    background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
+}
+
+.nivel-2-header {
+    background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+}
+
+.nivel-3-header {
+    background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.nivel-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.nivel-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.nivel-header p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress {
+    height: 100%;
+    background: white;
+    width: 0%;
+    transition: width 0.5s ease;
+    border-radius: 1rem;
+}
+
+.progress-text {
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+/* Layout com sidebar */
+.nivel-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3rem;
+    padding: 3rem 2rem;
+    max-width: 1400px;
+}
+
+.sidebar {
+    position: relative;
+}
+
+.sidebar-sticky {
+    position: sticky;
+    top: 100px;
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar h3 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sidebar-link {
+    padding: 0.75rem 1rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.sidebar-link:hover {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--text-primary);
+}
+
+.sidebar-link.active {
+    background: var(--primary);
+    color: white;
+}
+
+.sidebar-info {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 0.5rem;
+    border: 1px solid var(--primary);
+}
+
+.sidebar-info p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Conteúdo das aulas */
+.content {
+    min-width: 0;
+}
+
+.aula-section {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+    scroll-margin-top: 100px;
+}
+
+.aula-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.aula-number {
+    padding: 0.5rem 1rem;
+    background: var(--primary);
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.aula-header h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.aula-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.text-block h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.text-block p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.text-block ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.text-block li {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.text-block li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
+.text-block code {
+    background: rgba(37, 99, 235, 0.2);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+    color: var(--primary);
+}
+
+/* Code blocks */
+.code-block {
+    background: var(--bg-secondary);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.code-header span {
+    font-family: 'Fira Code', monospace;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.copy-btn {
+    padding: 0.25rem 0.75rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.copy-btn:hover {
+    background: var(--primary-dark);
+}
+
+.copy-btn.copied {
+    background: var(--nivel-1);
+}
+
+.code-block pre {
+    padding: 1.5rem;
+    margin: 0;
+    overflow-x: auto;
+}
+
+.code-block code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+}
+
+/* Info boxes */
+.info-box,
+.tip-box,
+.warning-box,
+.success-box {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid;
+}
+
+.info-box {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: #3B82F6;
+}
+
+.tip-box {
+    background: rgba(96, 165, 250, 0.1);
+    border-color: #60A5FA;
+}
+
+.warning-box {
+    background: rgba(37, 99, 235, 0.15);
+    border-color: #2563EB;
+}
+
+.success-box {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: #3B82F6;
+}
+
+.info-icon,
+.tip-icon,
+.warning-icon,
+.success-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.info-box h4,
+.tip-box h4,
+.warning-box h4,
+.success-box h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.info-box p,
+.tip-box p,
+.warning-box p,
+.success-box p {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.info-box ul,
+.success-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-box li,
+.success-box li {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+/* Challenge box */
+.challenge-box {
+    background: rgba(37, 99, 235, 0.1);
+    border: 1px solid var(--secondary);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+.challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.challenge-header span {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.toggle-btn {
+    padding: 0.5rem 1rem;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.toggle-btn:hover {
+    background: var(--primary-dark);
+}
+
+.challenge-box > p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.solution {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Complete check */
+.complete-check {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 0.5rem;
+    border: 1px solid var(--primary);
+}
+
+.complete-check input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.complete-check label {
+    cursor: pointer;
+    font-weight: 600;
+    user-select: none;
+}
+
+/* Projeto section */
+.projeto-section {
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.3);
+}
+
+.next-level {
+    text-align: center;
+    padding: 2rem;
+    background: var(--gradient-1);
+    border-radius: 0.75rem;
+}
+
+.next-level h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.next-level p {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+/* Responsivo */
+@media (max-width: 968px) {
+    .nivel-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        order: 2;
+    }
+
+    .sidebar-sticky {
+        position: static;
+    }
+
+    .content {
+        order: 1;
+    }
+
+    .nivel-header h1 {
+        font-size: 2rem;
+    }
+
+    .aula-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .nivel-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .aula-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .challenge-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}

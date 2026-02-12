@@ -1,0 +1,270 @@
+/* ============================================
+   CORREÇÕES DE UX - Remover animações que atrapalham leitura
+   ============================================ */
+
+/* DESABILITAR ANIMAÇÕES DE HOVER que fazem elementos "pularem" */
+
+/* Cards não devem se mover no hover - dificulta leitura */
+.about-card:hover,
+.level-card:hover,
+.feature-card:hover,
+.aula-card:hover {
+    transform: none !important;
+}
+
+/* Manter apenas a sombra e borda, sem movimento */
+.about-card:hover {
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2) !important;
+    border-color: var(--primary, #3B82F6) !important;
+}
+
+.level-card:hover {
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2) !important;
+}
+
+.feature-card:hover {
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2) !important;
+}
+
+/* ============================================
+   MELHORAR LEGIBILIDADE DE TEXTOS
+   ============================================ */
+
+/* Textos descritivos - azul claro ao invés de cinza escuro */
+.about-card p,
+.feature-card p,
+.level-description,
+.text-block p,
+.aula-content p {
+    color: #94A3B8 !important;
+}
+
+/* Títulos - branco puro para máximo contraste */
+.about-card h3,
+.about-card h4,
+.feature-card h3,
+.feature-card h4,
+.level-title,
+.aula-section h2,
+.aula-section h3,
+.info-box h4,
+.tip-box h4,
+.warning-box h4,
+.success-box h4 {
+    color: #FFFFFF !important;
+}
+
+/* Texto secundário - azul claro legível */
+.level-subtitle,
+.stat-label,
+.aula-number,
+.section-description {
+    color: #CBD5E1 !important;
+}
+
+/* Info boxes - texto mais legível */
+.info-box p,
+.info-box ul li,
+.tip-box p,
+.warning-box p,
+.success-box p {
+    color: #E2E8F0 !important;
+}
+
+/* Code blocks - manter legibilidade do código */
+.code-block code,
+.code-block pre {
+    color: #F1F5F9 !important;
+}
+
+/* Badges e labels - manter visibilidade */
+.badge,
+.nivel-badge,
+.section-badge,
+.featured-badge {
+    color: #FFFFFF !important;
+}
+
+/* Botões - texto sempre branco */
+.btn-primary,
+.btn-secondary,
+.btn-large,
+.btn-level,
+.toggle-btn {
+    color: #FFFFFF !important;
+}
+
+/* Links do menu - azul claro */
+.nav-link {
+    color: #94A3B8 !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #FFFFFF !important;
+}
+
+/* ============================================
+   REMOVER TRANSIÇÕES EXCESSIVAS
+   ============================================ */
+
+/* Elementos de conteúdo não devem ter transição all */
+.about-card,
+.level-card,
+.feature-card,
+.aula-card {
+    transition: box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* ============================================
+   MELHORAR CONTRASTE EM TEXTOS PEQUENOS
+   ============================================ */
+
+/* Textos pequenos precisam de mais contraste */
+.level-info span,
+.challenge-box p,
+.stat-number,
+.progress-text {
+    color: #F1F5F9 !important;
+    font-weight: 500 !important;
+}
+
+/* ============================================
+   DESABILITAR ANIMAÇÕES EM ELEMENTOS INTERATIVOS
+   ============================================ */
+
+/* Checkboxes e labels não devem se mover */
+.complete-check label:hover,
+.sidebar-link:hover {
+    transform: none !important;
+}
+
+/* Manter apenas mudança de cor, sem movimento */
+.sidebar-link:hover {
+    background: rgba(59, 130, 246, 0.1) !important;
+    color: #60A5FA !important;
+}
+
+/* ============================================
+   CÓDIGO INLINE - Melhor visibilidade
+   ============================================ */
+
+/* Código inline deve ter bom contraste */
+code {
+    color: #60A5FA !important;
+    background: rgba(59, 130, 246, 0.1) !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+}
+
+/* ============================================
+   LISTAS - Melhor legibilidade
+   ============================================ */
+
+/* Itens de lista */
+.level-topics .topic,
+.info-box ul li,
+.success-box ul li {
+    color: #CBD5E1 !important;
+}
+
+/* ============================================
+   FOOTER - Texto legível
+   ============================================ */
+
+.footer p,
+.footer-bottom p {
+    color: #94A3B8 !important;
+}
+
+/* ============================================
+   TABELAS E DADOS - Alto contraste
+   ============================================ */
+
+table,
+.table {
+    color: #F1F5F9 !important;
+}
+
+th {
+    color: #FFFFFF !important;
+}
+
+td {
+    color: #CBD5E1 !important;
+}
+
+/* ============================================
+   MODO DE FOCO - Manter acessibilidade
+   ============================================ */
+
+/* Elementos focados devem ter outline visível */
+*:focus-visible {
+    outline: 2px solid #60A5FA !important;
+    outline-offset: 2px !important;
+}
+
+/* ============================================
+   DESABILITAR ANIMAÇÕES WOW/ANIMATED NOS NÍVEIS
+   ============================================ */
+
+/* Remover animações de scroll (WOW.js) que atrapalham leitura */
+.wow,
+.animated {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+/* Forçar visibilidade imediata de todos os elementos nos níveis */
+.aula-section .wow,
+.aula-section .animated,
+.text-block.wow,
+.code-block.wow,
+.info-box.wow,
+.tip-box.wow,
+.warning-box.wow,
+.success-box.wow,
+.challenge-box.wow {
+    animation-name: none !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0) !important;
+    visibility: visible !important;
+}
+
+/* Desabilitar animações específicas de fade */
+.fadeIn,
+.fadeInUp,
+.fadeInDown,
+.fadeInLeft,
+.fadeInRight,
+.bounceIn,
+.zoomIn {
+    animation: none !important;
+    opacity: 1 !important;
+}
+
+/* Garantir que delay não atrase aparecimento */
+[data-wow-delay] {
+    animation-delay: 0s !important;
+}
+
+/* Desabilitar todas as animações do Animate.css nos níveis */
+.aula-content * {
+    animation: none !important;
+    animation-duration: 0s !important;
+}
+
+/* ============================================
+   PERFORMANCE - Reduzir overhead de animações
+   ============================================ */
+
+/* Remover will-change que era usado para otimizar animações */
+.wow,
+.animated,
+.aula-section * {
+    will-change: auto !important;
+}

@@ -1,0 +1,441 @@
+/* ============================================
+   EFEITOS ESPECIAIS - Python for PUC
+   ============================================ */
+
+/* 1. EFEITO DE CÓDIGO DIGITANDO */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-cursor {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #3B82F6; }
+}
+
+.code-typing {
+    overflow: hidden;
+    border-right: 3px solid #3B82F6;
+    white-space: nowrap;
+    animation: typing 3s steps(40, end), blink-cursor 0.75s step-end infinite;
+}
+
+/* 2. EFEITO RIPPLE NOS BOTÕES */
+.btn-ripple {
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+.btn-ripple::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-ripple:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* 3. EFEITO SHIMMER/BRILHO */
+@keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+}
+
+.shimmer {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 3s infinite;
+}
+
+/* 4. EFEITO GLITCH NO HOVER */
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+.glitch-hover:hover {
+    animation: glitch 0.3s;
+}
+
+/* 5. CÓDIGO COM EFEITO DE TERMINAL */
+.code-terminal {
+    position: relative;
+}
+
+.code-terminal::before {
+    content: '$ ';
+    color: #10B981;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* 6. EFEITO DE PULSE NO CÓDIGO */
+@keyframes pulse-code {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+    50% { box-shadow: 0 0 0 10px rgba(37, 99, 235, 0); }
+}
+
+.code-block:hover {
+    animation: pulse-code 2s infinite;
+}
+
+/* 7. EFEITO DE LEVITAÇÃO */
+@keyframes levitate {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.levitate {
+    animation: levitate 3s ease-in-out infinite;
+}
+
+/* 8. EFEITO DE SCANNER NO CÓDIGO */
+@keyframes scan {
+    0% { top: 0; }
+    50% { top: 100%; }
+    100% { top: 0; }
+}
+
+.code-window::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3B82F6, transparent);
+    animation: scan 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.code-window:hover::after {
+    opacity: 0.5;
+}
+
+/* 9. TEXTO COM EFEITO NEON */
+.neon-text {
+    color: #3B82F6;
+    text-shadow:
+        0 0 5px #3B82F6,
+        0 0 10px #3B82F6,
+        0 0 20px #3B82F6,
+        0 0 40px #2563EB,
+        0 0 80px #2563EB;
+    animation: neon-flicker 1.5s infinite alternate;
+}
+
+@keyframes neon-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow:
+            0 0 5px #3B82F6,
+            0 0 10px #3B82F6,
+            0 0 20px #3B82F6,
+            0 0 40px #2563EB,
+            0 0 80px #2563EB;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+/* 10. EFEITO DE ONDA NO BACKGROUND */
+@keyframes wave {
+    0% { transform: translateX(0) translateY(0); }
+    50% { transform: translateX(-25%) translateY(-25%); }
+    100% { transform: translateX(0) translateY(0); }
+}
+
+.wave-bg {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
+    animation: wave 20s ease-in-out infinite;
+}
+
+/* 11. EFEITO DE CÓDIGO SENDO ESCRITO */
+.code-write {
+    overflow: hidden;
+    border-right: 2px solid #3B82F6;
+    white-space: pre;
+    font-family: 'Fira Code', monospace;
+    animation:
+        typing 4s steps(40, end),
+        blink-cursor 0.75s step-end infinite;
+}
+
+/* 12. BOTÃO COM EFEITO DE HOVER ESPECIAL */
+.btn-special {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-special::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: width 0.5s;
+    z-index: -1;
+}
+
+.btn-special:hover::before {
+    width: 100%;
+}
+
+/* 13. CARD COM EFEITO DE VIDRO (GLASSMORPHISM) */
+.glass-effect {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 14. EFEITO DE PARTÍCULAS NO CÓDIGO */
+@keyframes particles {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) scale(1);
+    }
+}
+
+.code-particles::before {
+    content: '{ }';
+    position: absolute;
+    color: #3B82F6;
+    opacity: 0;
+    animation: particles 3s infinite;
+}
+
+/* 15. SCROLL REVEAL - Animação ao aparecer */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 16. EFEITO DE CÓDIGO PISCANDO */
+@keyframes code-blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0.5; }
+}
+
+.code-blink {
+    animation: code-blink 2s infinite;
+}
+
+/* 17. CURSOR PERSONALIZADO NA ÁREA DE CÓDIGO */
+.code-area {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><text y="15" style="font-size:16px;fill:%233B82F6;">|</text></svg>'), text;
+}
+
+/* 18. EFEITO DE LOADING NOS CÓDIGOS */
+@keyframes loading {
+    0% { content: 'Carregando'; }
+    25% { content: 'Carregando.'; }
+    50% { content: 'Carregando..'; }
+    75% { content: 'Carregando...'; }
+    100% { content: 'Carregando'; }
+}
+
+/* 19. EFEITO 3D NO HOVER DOS CARDS */
+.card-3d {
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.card-3d:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.02);
+}
+
+/* 20. EFEITO DE GRADIENTE ANIMADO */
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.gradient-animated {
+    background: linear-gradient(270deg, #3B82F6, #2563EB, #1E40AF, #3B82F6);
+    background-size: 400% 400%;
+    animation: gradient-shift 8s ease infinite;
+}
+
+/* 21. EFEITO DE BOUNCE SUAVE */
+@keyframes soft-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.soft-bounce:hover {
+    animation: soft-bounce 0.6s ease;
+}
+
+/* 22. EFEITO DE CÓDIGO SENDO COMPILADO */
+@keyframes compile {
+    0% { width: 0%; background: #3B82F6; }
+    50% { width: 100%; background: #10B981; }
+    100% { width: 100%; background: #10B981; }
+}
+
+.compile-bar {
+    height: 2px;
+    width: 0%;
+    background: #3B82F6;
+    animation: compile 2s ease-in-out;
+}
+
+/* 23. EFEITO DE HOVER COM BRILHO */
+.glow-on-hover {
+    transition: all 0.3s ease;
+}
+
+.glow-on-hover:hover {
+    box-shadow:
+        0 0 20px rgba(37, 99, 235, 0.6),
+        0 0 40px rgba(37, 99, 235, 0.4),
+        0 0 60px rgba(37, 99, 235, 0.2);
+}
+
+/* 24. EFEITO DE PARALLAX SUAVE */
+.parallax {
+    will-change: transform;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 25. BADGE PULSANTE */
+@keyframes badge-pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+.badge-animated {
+    animation: badge-pulse 2s ease-in-out infinite;
+}
+
+/* 26. EFEITO DE RAIO NO CÓDIGO */
+@keyframes lightning {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.code-lightning::after {
+    content: '⚡';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: lightning 2s infinite;
+}
+
+/* 27. TEXTO COM EFEITO DE DIGITAÇÃO CONTÍNUA */
+.typing-continuous {
+    overflow: hidden;
+    border-right: 3px solid #3B82F6;
+    white-space: nowrap;
+    animation:
+        typing-loop 4s steps(40) infinite,
+        blink-cursor 0.75s step-end infinite;
+}
+
+@keyframes typing-loop {
+    0%, 90%, 100% { width: 0; }
+    30%, 60% { width: 100%; }
+}
+
+/* 28. EFEITO DE SCAN DE CÓDIGO */
+.code-scan {
+    position: relative;
+    overflow: hidden;
+}
+
+.code-scan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+    animation: scan-code 3s infinite;
+}
+
+@keyframes scan-code {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* 29. EFEITO DE MATRIX (CHUVA DE CÓDIGO) */
+@keyframes matrix-rain {
+    0% { transform: translateY(-100%); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.matrix-char {
+    position: fixed;
+    color: #3B82F6;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    opacity: 0;
+    animation: matrix-rain 5s linear infinite;
+}
+
+/* 30. BOTÃO COM EFEITO DE PROGRESSO - DESABILITADO */
+/* Removido para evitar linha verde indesejada nos botões
+.btn-progress {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-progress::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #10B981;
+    transition: width 0.3s ease;
+}
+
+.btn-progress:hover::after {
+    width: 100%;
+}
+*/

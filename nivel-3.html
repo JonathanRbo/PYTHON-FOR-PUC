@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nível 3 - Avançado | Python for PUC</title>
+    <link rel="stylesheet" href="https://cdn.squeleton.dev/squeleton.v4.min.css">
+    <script src="https://cdn.squeleton.dev/squeleton-main.v4.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nivel.css">
+    <link rel="stylesheet" href="css/effects.css">
+    <link rel="stylesheet" href="css/modal-fix.css">
+    <link rel="stylesheet" href="css/ux-fixes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-icon">🐍</span>
+                    <span class="logo-text">Python<span class="logo-highlight">for</span>PUC</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Início</a>
+                    <a href="nivel-1.html" class="nav-link">Nível 1</a>
+                    <a href="nivel-2.html" class="nav-link">Nível 2</a>
+                    <a href="nivel-3.html" class="nav-link active">Nível 3</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="nivel-header nivel-3-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="nivel-badge">📙 Nível 3</div>
+                <h1>Avançado - Virando Ninja</h1>
+                <p>POO, arquivos, bibliotecas e projetos profissionais!</p>
+                <div class="progress-bar">
+                    <div class="progress" id="progress-bar"></div>
+                </div>
+                <p class="progress-text">Seu progresso: <span id="progress-percent">0%</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container nivel-container">
+        <aside class="sidebar">
+            <div class="sidebar-sticky">
+                <h3>📚 Conteúdo</h3>
+                <nav class="sidebar-nav">
+                    <a href="#aula-1" class="sidebar-link active">Aula 1: POO - Classes</a>
+                    <a href="#aula-2" class="sidebar-link">Aula 2: Herança</a>
+                    <a href="#aula-3" class="sidebar-link">Aula 3: Arquivos</a>
+                    <a href="#aula-4" class="sidebar-link">Aula 4: Tratamento de Erros</a>
+                    <a href="#projeto" class="sidebar-link">🎯 Projeto Final</a>
+                </nav>
+                <div class="sidebar-info">
+                    <p>🏆 <strong>Parabéns:</strong> Você chegou ao nível avançado!</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="content">
+            <section id="aula-1" class="aula-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">Aula 1</span>
+                    <h2>🎨 Programação Orientada a Objetos</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="text-block wow fadeInUp">
+                        <h3>O que é POO?</h3>
+                        <p>Imagine que você cria um "molde" de aluno da PUC, e depois cria vários alunos a partir desse molde!</p>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="code-header">
+                            <span>aluno_puc.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>class AlunoPUC:
+    def __init__(self, nome, curso, semestre):
+        self.nome = nome
+        self.curso = curso
+        self.semestre = semestre
+        self.notas = []
+
+    def adicionar_nota(self, nota):
+        self.notas.append(nota)
+
+    def calcular_media(self):
+        if len(self.notas) == 0:
+            return 0
+        return sum(self.notas) / len(self.notas)
+
+    def mostrar_info(self):
+        print(f"\n=== {self.nome} ===")
+        print(f"Curso: {self.curso}")
+        print(f"Semestre: {self.semestre}")
+        print(f"Média: {self.calcular_media():.2f}")
+
+# Criando alunos
+aluno1 = AlunoPUC("João", "Ciência da Computação", 3)
+aluno1.adicionar_nota(8.5)
+aluno1.adicionar_nota(9.0)
+aluno1.mostrar_info()
+
+aluno2 = AlunoPUC("Maria", "Engenharia", 2)
+aluno2.adicionar_nota(7.5)
+aluno2.adicionar_nota(8.0)
+aluno2.mostrar_info()</code></pre>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-1-poo" onchange="updateProgress()">
+                        <label for="check-1-poo">Completei esta aula! ✓</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aula 2 -->
+            <section id="aula-2" class="aula-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">Aula 2</span>
+                    <h2>🧬 Herança - Classes Filhas</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="text-block wow fadeInUp">
+                        <h3>Classes podem herdar de outras classes!</h3>
+                        <p>Imagine: você tem uma classe "Pessoa da PUC". Dela, você pode criar "Aluno" e "Professor"! 🎓</p>
+                        <p>Herança evita repetir código - tudo que a classe PAI tem, o FILHO também tem!</p>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="code-header">
+                            <span>heranca_basica.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code># Classe PAI (ou superclasse)
+class PessoaPUC:
+    def __init__(self, nome, cpf):
+        self.nome = nome
+        self.cpf = cpf
+
+    def mostrar_dados(self):
+        print(f"Nome: {self.nome}")
+        print(f"CPF: {self.cpf}")
+
+# Classe FILHA (herda de PessoaPUC)
+class Aluno(PessoaPUC):
+    def __init__(self, nome, cpf, matricula, curso):
+        super().__init__(nome, cpf)  # Chama o __init__ do pai
+        self.matricula = matricula
+        self.curso = curso
+        self.notas = []
+
+    def adicionar_nota(self, nota):
+        self.notas.append(nota)
+
+    def calcular_media(self):
+        if len(self.notas) == 0:
+            return 0
+        return sum(self.notas) / len(self.notas)
+
+# Criando um aluno
+aluno1 = Aluno("João Silva", "123.456.789-00", "2024001", "Ciência da Computação")
+aluno1.mostrar_dados()  # Método herdado do pai!
+aluno1.adicionar_nota(8.5)
+aluno1.adicionar_nota(9.0)
+print(f"Matrícula: {aluno1.matricula}")
+print(f"Média: {aluno1.calcular_media()}")</code></pre>
+                    </div>
+
+                    <div class="info-box wow fadeInUp" data-wow-delay="0.15s">
+                        <div class="info-icon">💡</div>
+                        <div>
+                            <h4>Entendendo super()</h4>
+                            <p><code>super().__init__()</code> chama o construtor da classe PAI</p>
+                            <p>Isso permite usar os atributos e métodos que o pai já criou!</p>
+                            <p>Sem o super(), você teria que reescrever tudo de novo.</p>
+                        </div>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="code-header">
+                            <span>sistema_puc_completo.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>class PessoaPUC:
+    def __init__(self, nome, cpf):
+        self.nome = nome
+        self.cpf = cpf
+
+    def identificar(self):
+        print(f"👤 {self.nome}")
+
+class Aluno(PessoaPUC):
+    def __init__(self, nome, cpf, curso):
+        super().__init__(nome, cpf)
+        self.curso = curso
+        self.notas = []
+
+    def identificar(self):
+        print(f"🎓 Aluno: {self.nome}")
+        print(f"📚 Curso: {self.curso}")
+
+class Professor(PessoaPUC):
+    def __init__(self, nome, cpf, departamento):
+        super().__init__(nome, cpf)
+        self.departamento = departamento
+        self.disciplinas = []
+
+    def identificar(self):
+        print(f"👨‍🏫 Professor: {self.nome}")
+        print(f"🏢 Departamento: {self.departamento}")
+
+    def adicionar_disciplina(self, disciplina):
+        self.disciplinas.append(disciplina)
+
+# Criando pessoas
+aluno = Aluno("Maria", "111.222.333-44", "Engenharia")
+prof = Professor("Dr. Carlos", "555.666.777-88", "Computação")
+
+# Cada um se identifica de forma diferente!
+aluno.identificar()
+print()
+prof.identificar()
+
+prof.adicionar_disciplina("Python Avançado")
+print(f"Disciplinas: {prof.disciplinas}")</code></pre>
+                    </div>
+
+                    <div class="tip-box wow fadeInUp" data-wow-delay="0.25s">
+                        <div class="tip-icon">⚡</div>
+                        <div>
+                            <h4>Sobrescrita de métodos (Override)</h4>
+                            <p>Percebeu que <code>identificar()</code> existe no PAI e nos FILHOS?</p>
+                            <p>Quando um método tem o MESMO NOME, o filho SOBRESCREVE o comportamento do pai!</p>
+                            <p>Isso se chama <strong>polimorfismo</strong> 🎭</p>
+                        </div>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="code-header">
+                            <span>veiculos_puc.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>class Veiculo:
+    def __init__(self, marca, modelo):
+        self.marca = marca
+        self.modelo = modelo
+
+    def buzinar(self):
+        print("BEEP BEEP! 📢")
+
+class Carro(Veiculo):
+    def __init__(self, marca, modelo, portas):
+        super().__init__(marca, modelo)
+        self.portas = portas
+
+    def buzinar(self):
+        print("BII BII! 🚗")
+
+class Moto(Veiculo):
+    def __init__(self, marca, modelo, cilindradas):
+        super().__init__(marca, modelo)
+        self.cilindradas = cilindradas
+
+    def buzinar(self):
+        print("VRUUM VRUUM! 🏍️")
+
+# Testando
+fusca = Carro("VW", "Fusca", 2)
+fusca.buzinar()  # BII BII!
+
+harley = Moto("Harley", "Davidson", 1200)
+harley.buzinar()  # VRUUM VRUUM!</code></pre>
+                    </div>
+
+                    <div class="warning-box wow fadeInUp" data-wow-delay="0.35s">
+                        <div class="warning-icon">⚠️</div>
+                        <div>
+                            <h4>Quando usar herança?</h4>
+                            <p>✅ Use quando existe uma relação <strong>"É UM"</strong></p>
+                            <p>• Aluno É UMA Pessoa ✅</p>
+                            <p>• Carro É UM Veículo ✅</p>
+                            <p>❌ Não use quando é só "tem alguma coisa em comum"</p>
+                            <p>• Casa TEM porta, mas Casa não É uma Porta ❌</p>
+                        </div>
+                    </div>
+
+                    <div class="challenge-box wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="challenge-header">
+                            <span>🎮 Desafio 2</span>
+                            <button class="toggle-btn cursor-pointer" data-modal-show="solucao-heranca">Ver Solução</button>
+                        </div>
+                        <p>Crie uma classe <code>Funcionario</code> e duas classes filhas: <code>FuncionarioTemporal</code> e <code>FuncionarioCLT</code>. Cada um com um método <code>calcular_salario()</code> diferente!</p>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-2-heranca" onchange="updateProgress()">
+                        <label for="check-2-heranca">Completei esta aula! ✓</label>
+                    </div>
+                </div>
+            </section>
+
+            <section id="aula-3" class="aula-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">Aula 3</span>
+                    <h2>📁 Trabalhando com Arquivos</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="text-block wow fadeInUp">
+                        <p>Agora você pode salvar dados para não perder quando fechar o programa!</p>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="code-header">
+                            <span>arquivos.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code># Salvando dados
+with open("notas_puc.txt", "w", encoding="utf-8") as arquivo:
+    arquivo.write("João - Nota: 8.5\n")
+    arquivo.write("Maria - Nota: 9.0\n")
+    arquivo.write("Pedro - Nota: 7.5\n")
+
+print("✅ Arquivo salvo!")
+
+# Lendo dados
+with open("notas_puc.txt", "r", encoding="utf-8") as arquivo:
+    conteudo = arquivo.read()
+    print("\n=== NOTAS SALVAS ===")
+    print(conteudo)</code></pre>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-3-arquivos" onchange="updateProgress()">
+                        <label for="check-3-arquivos">Completei esta aula! ✓</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aula 4 -->
+            <section id="aula-4" class="aula-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">Aula 4</span>
+                    <h2>🛡️ Tratamento de Erros - Seu Programa Não Vai Quebrar!</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="text-block wow fadeInUp">
+                        <h3>E se o usuário digitar algo errado?</h3>
+                        <p>Seu programa não pode QUEBRAR toda vez que der erro! Use <code>try/except</code>! 🚨</p>
+                        <p>É como um plano B: "Tenta fazer isso. Se der erro, faz aquilo."</p>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="code-header">
+                            <span>sem_tratamento.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code># SEM tratamento - programa QUEBRA! ❌
+numero = int(input("Digite um número: "))
+# Se usuário digitar "abc", o programa QUEBRA!
+
+resultado = 10 / numero
+# Se usuário digitar 0, o programa QUEBRA!
+
+print(f"Resultado: {resultado}")</code></pre>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.15s">
+                        <div class="code-header">
+                            <span>com_tratamento.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code># COM tratamento - programa CONTINUA! ✅
+try:
+    numero = int(input("Digite um número: "))
+    resultado = 10 / numero
+    print(f"Resultado: {resultado}")
+except ValueError:
+    print("❌ Erro: Você não digitou um número válido!")
+except ZeroDivisionError:
+    print("❌ Erro: Não pode dividir por zero!")
+except:
+    print("❌ Erro desconhecido!")
+
+print("Programa continua funcionando! 🎉")</code></pre>
+                    </div>
+
+                    <div class="info-box wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="info-icon">💡</div>
+                        <div>
+                            <h4>Estrutura do try/except</h4>
+                            <ul>
+                                <li><code>try:</code> - Tenta executar esse código</li>
+                                <li><code>except TipoErro:</code> - Se der esse erro, faz isso</li>
+                                <li><code>else:</code> - Se NÃO der erro nenhum (opcional)</li>
+                                <li><code>finally:</code> - SEMPRE executa, dê erro ou não (opcional)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.25s">
+                        <div class="code-header">
+                            <span>estrutura_completa.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>try:
+    nota = float(input("Digite a nota (0-10): "))
+
+    if nota < 0 or nota > 10:
+        raise ValueError("Nota fora do intervalo!")
+
+    media = nota / 2
+    print(f"Metade da nota: {media}")
+
+except ValueError as erro:
+    print(f"❌ Erro de valor: {erro}")
+
+except Exception as erro:
+    print(f"❌ Erro inesperado: {erro}")
+
+else:
+    print("✅ Tudo certo! Nenhum erro aconteceu.")
+
+finally:
+    print("🔚 Programa finalizado (sempre executa)")</code></pre>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="code-header">
+                            <span>sistema_notas_seguro.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>def cadastrar_aluno():
+    try:
+        print("\n=== CADASTRO DE ALUNO ===")
+        nome = input("Nome: ")
+
+        if not nome.strip():
+            raise ValueError("Nome não pode ser vazio!")
+
+        idade = int(input("Idade: "))
+
+        if idade < 16 or idade > 100:
+            raise ValueError("Idade inválida!")
+
+        nota = float(input("Nota (0-10): "))
+
+        if nota < 0 or nota > 10:
+            raise ValueError("Nota deve estar entre 0 e 10!")
+
+        # Se chegou aqui, está tudo OK!
+        print(f"\n✅ Aluno {nome} cadastrado com sucesso!")
+        print(f"Idade: {idade} anos")
+        print(f"Nota: {nota}")
+
+        return True
+
+    except ValueError as erro:
+        print(f"\n❌ Erro: {erro}")
+        return False
+
+    except Exception as erro:
+        print(f"\n❌ Erro inesperado: {erro}")
+        return False
+
+# Testando
+while True:
+    sucesso = cadastrar_aluno()
+
+    if sucesso:
+        continuar = input("\nCadastrar outro? (s/n): ")
+        if continuar.lower() != "s":
+            break
+    else:
+        tentar_novamente = input("\nTentar novamente? (s/n): ")
+        if tentar_novamente.lower() != "s":
+            break
+
+print("👋 Sistema encerrado!")</code></pre>
+                    </div>
+
+                    <div class="tip-box wow fadeInUp" data-wow-delay="0.35s">
+                        <div class="tip-icon">⚡</div>
+                        <div>
+                            <h4>Principais tipos de erro</h4>
+                            <p><code>ValueError</code> - Valor errado (ex: "abc" quando espera número)</p>
+                            <p><code>ZeroDivisionError</code> - Divisão por zero</p>
+                            <p><code>TypeError</code> - Tipo errado (ex: somar número com texto)</p>
+                            <p><code>FileNotFoundError</code> - Arquivo não existe</p>
+                            <p><code>KeyError</code> - Chave não existe no dicionário</p>
+                            <p><code>IndexError</code> - Índice fora da lista</p>
+                        </div>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="code-header">
+                            <span>validacao_completa.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>def validar_nota():
+    """Função que garante uma nota válida"""
+    while True:
+        try:
+            nota = float(input("Digite a nota (0-10): "))
+
+            if nota < 0 or nota > 10:
+                print("⚠️ Nota deve estar entre 0 e 10!")
+                continue
+
+            return nota
+
+        except ValueError:
+            print("❌ Digite apenas números!")
+
+        except KeyboardInterrupt:
+            print("\n\n👋 Programa cancelado pelo usuário!")
+            exit()
+
+def validar_inteiro(mensagem, minimo, maximo):
+    """Função genérica para validar números inteiros"""
+    while True:
+        try:
+            valor = int(input(mensagem))
+
+            if valor < minimo or valor > maximo:
+                print(f"⚠️ Valor deve estar entre {minimo} e {maximo}!")
+                continue
+
+            return valor
+
+        except ValueError:
+            print("❌ Digite apenas números inteiros!")
+
+# Usando as funções
+print("=== SISTEMA DE NOTAS PUC ===")
+nota1 = validar_nota()
+nota2 = validar_nota()
+nota3 = validar_nota()
+
+media = (nota1 + nota2 + nota3) / 3
+print(f"\n📊 Média: {media:.2f}")
+
+idade = validar_inteiro("Sua idade: ", 16, 100)
+print(f"Idade: {idade} anos")</code></pre>
+                    </div>
+
+                    <div class="warning-box wow fadeInUp" data-wow-delay="0.45s">
+                        <div class="warning-icon">⚠️</div>
+                        <div>
+                            <h4>Boas práticas</h4>
+                            <p>✅ Capture erros ESPECÍFICOS (ValueError, ZeroDivisionError...)</p>
+                            <p>✅ Use mensagens claras para o usuário</p>
+                            <p>✅ Não capture TODOS os erros com <code>except:</code> - pode esconder bugs!</p>
+                            <p>❌ Não deixe o except vazio - sempre faça algo!</p>
+                        </div>
+                    </div>
+
+                    <div class="challenge-box wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="challenge-header">
+                            <span>🎮 Desafio 4</span>
+                            <button class="toggle-btn cursor-pointer" data-modal-show="solucao-erros">Ver Solução</button>
+                        </div>
+                        <p>Crie uma função <code>dividir_seguro(a, b)</code> que trata divisão por zero E valores não numéricos, retornando uma mensagem de erro amigável!</p>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-4-erros" onchange="updateProgress()">
+                        <label for="check-4-erros">Completei esta aula! ✓</label>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projeto" class="aula-section projeto-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">🎯 Projeto Final</span>
+                    <h2>Sistema Completo de Gerenciamento PUC</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="text-block wow fadeInUp">
+                        <p>Vamos criar um sistema completo com POO e salvamento de dados!</p>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="code-header">
+                            <span>sistema_puc_completo.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>import json
+
+class AlunoPUC:
+    def __init__(self, nome, curso):
+        self.nome = nome
+        self.curso = curso
+        self.notas = []
+
+    def adicionar_nota(self, materia, nota):
+        self.notas.append({"materia": materia, "nota": nota})
+
+    def calcular_media(self):
+        if not self.notas:
+            return 0
+        total = sum(n["nota"] for n in self.notas)
+        return total / len(self.notas)
+
+class SistemaPUC:
+    def __init__(self):
+        self.alunos = []
+
+    def cadastrar_aluno(self):
+        nome = input("Nome: ")
+        curso = input("Curso: ")
+        aluno = AlunoPUC(nome, curso)
+        self.alunos.append(aluno)
+        print("✅ Aluno cadastrado!")
+
+    def listar_alunos(self):
+        if not self.alunos:
+            print("📝 Nenhum aluno cadastrado")
+            return
+
+        print("\n=== ALUNOS DA PUC ===")
+        for i, aluno in enumerate(self.alunos, 1):
+            media = aluno.calcular_media()
+            print(f"{i}. {aluno.nome} - {aluno.curso} (Média: {media:.2f})")
+
+    def menu(self):
+        while True:
+            print("\n=== SISTEMA PUC ===")
+            print("1 - Cadastrar aluno")
+            print("2 - Listar alunos")
+            print("3 - Sair")
+
+            opcao = input("Escolha: ")
+
+            if opcao == "1":
+                self.cadastrar_aluno()
+            elif opcao == "2":
+                self.listar_alunos()
+            elif opcao == "3":
+                print("👋 Até logo!")
+                break
+
+# Executar sistema
+sistema = SistemaPUC()
+sistema.menu()</code></pre>
+                    </div>
+
+                    <div class="success-box">
+                        <div class="success-icon">🏆</div>
+                        <div>
+                            <h4>VOCÊ É OFICIALMENTE UM PROGRAMADOR PYTHON!</h4>
+                            <p>Parabéns por completar todos os 3 níveis! Você agora domina:</p>
+                            <ul>
+                                <li>✅ Fundamentos de Python</li>
+                                <li>✅ Estruturas de controle e loops</li>
+                                <li>✅ Listas e funções</li>
+                                <li>✅ Programação Orientada a Objetos</li>
+                                <li>✅ Manipulação de arquivos</li>
+                                <li>✅ Tratamento de erros</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="next-level">
+                        <h3>🌟 O que fazer agora?</h3>
+                        <p>Continue aprendendo: Web (Flask/Django), Data Science (Pandas/NumPy), IA (TensorFlow)!</p>
+                        <a href="index.html" class="btn-large btn-primary">Voltar ao Início</a>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-projeto" onchange="updateProgress()">
+                        <label for="check-projeto">Completei TUDO! 🎉</label>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal Solução Herança -->
+    <div data-modal="solucao-heranca" class="modal-dialog" aria-hidden="true">
+        <div class="dialog-content">
+            <div class="dialog-backdrop" data-modal-hide></div>
+            <div class="dialog-inline w-600px xs-w-90">
+                <button class="dialog-close" data-modal-hide></button>
+                <div class="modal-popup border-rd-10 p-30-all">
+                    <h3 class="fs-11 m-20-b">✅ Solução do Desafio Herança</h3>
+                    <div class="code-block">
+                        <pre><code>class Funcionario:
+    def __init__(self, nome, cpf):
+        self.nome = nome
+        self.cpf = cpf
+
+    def mostrar_info(self):
+        print(f"👤 Nome: {self.nome}")
+        print(f"📄 CPF: {self.cpf}")
+
+class FuncionarioTemporal(Funcionario):
+    def __init__(self, nome, cpf, horas_trabalhadas, valor_hora):
+        super().__init__(nome, cpf)
+        self.horas_trabalhadas = horas_trabalhadas
+        self.valor_hora = valor_hora
+
+    def calcular_salario(self):
+        return self.horas_trabalhadas * self.valor_hora
+
+class FuncionarioCLT(Funcionario):
+    def __init__(self, nome, cpf, salario_base, bonus):
+        super().__init__(nome, cpf)
+        self.salario_base = salario_base
+        self.bonus = bonus
+
+    def calcular_salario(self):
+        return self.salario_base + self.bonus
+
+# Testando
+temp = FuncionarioTemporal("João", "111.222.333-44", 160, 25)
+print(f"💰 Salário temporal: R$ {temp.calcular_salario()}")
+
+clt = FuncionarioCLT("Maria", "555.666.777-88", 3000, 500)
+print(f"💰 Salário CLT: R$ {clt.calcular_salario()}")</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Solução Erros -->
+    <div data-modal="solucao-erros" class="modal-dialog" aria-hidden="true">
+        <div class="dialog-content">
+            <div class="dialog-backdrop" data-modal-hide></div>
+            <div class="dialog-inline w-600px xs-w-90">
+                <button class="dialog-close" data-modal-hide></button>
+                <div class="modal-popup border-rd-10 p-30-all">
+                    <h3 class="fs-11 m-20-b">✅ Solução do Desafio Erros</h3>
+                    <div class="code-block">
+                        <pre><code>def dividir_seguro(a, b):
+    try:
+        # Tenta converter para float
+        num1 = float(a)
+        num2 = float(b)
+
+        # Tenta dividir
+        resultado = num1 / num2
+
+        return f"✅ Resultado: {resultado:.2f}"
+
+    except ValueError:
+        return "❌ Erro: Um dos valores não é um número válido!"
+
+    except ZeroDivisionError:
+        return "❌ Erro: Não é possível dividir por zero!"
+
+    except Exception as erro:
+        return f"❌ Erro inesperado: {erro}"
+
+# Testando a função
+print(dividir_seguro(10, 2))      # ✅ Resultado: 5.00
+print(dividir_seguro(10, 0))      # ❌ Erro: divisão por zero
+print(dividir_seguro("abc", 2))   # ❌ Erro: valor inválido
+print(dividir_seguro("15", "3"))  # ✅ Resultado: 5.00</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>💜 Python for PUC - Feito por estudantes, para estudantes</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.squeleton.dev/squeleton-scripts.v4.min.js"></script>
+    <script src="js/modal-init.js"></script>
+    <script src="js/nivel.js"></script>
+    <script src="js/effects.js"></script>
+</body>
+</html>

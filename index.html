@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python for PUC - Aprenda Python do Zero</title>
+    <!-- Squeleton Framework -->
+    <link rel="stylesheet" href="https://cdn.squeleton.dev/squeleton.v4.min.css">
+    <script src="https://cdn.squeleton.dev/squeleton-main.v4.min.js"></script>
+
+    <!-- Projeto Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/effects.css">
+    <link rel="stylesheet" href="css/ux-fixes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-icon">🐍</span>
+                    <span class="logo-text">Python<span class="logo-highlight">for</span>PUC</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">Início</a>
+                    <a href="#about" class="nav-link">Sobre</a>
+                    <a href="#levels" class="nav-link">Níveis</a>
+                    <a href="#features" class="nav-link">Recursos</a>
+                    <a href="nivel-1.html" class="btn-primary">Começar Agora</a>
+                </div>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="badge">🎓 Feito por estudantes da PUC</div>
+                    <h1 class="hero-title">
+                        Aprenda <span class="gradient-text">Python</span><br>
+                        De Uma Forma<br>
+                        <span class="typed-text">Divertida</span>
+                    </h1>
+                    <p class="hero-description">
+                        Um guia completo e interativo de Python, criado especialmente para estudantes da PUC.
+                        Do básico ao avançado, com projetos práticos e exemplos do mundo real.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="nivel-1.html" class="btn-large btn-primary">
+                            🚀 Começar Jornada
+                        </a>
+                        <a href="#about" class="btn-large btn-secondary">
+                            📖 Saiba Mais
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Níveis</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Exercícios</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Projetos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="window-title">primeiro_programa.py</span>
+                        </div>
+                        <div class="window-body">
+<pre><code><span class="comment"># Seu primeiro programa Python!</span>
+<span class="keyword">def</span> <span class="function">saudacao</span>():
+    <span class="variable">nome</span> = <span class="string">"Estudante da PUC"</span>
+    <span class="keyword">print</span>(<span class="string">f"Olá, {nome}!"</span>)
+    <span class="keyword">print</span>(<span class="string">"Bem-vindo ao Python! 🎉"</span>)
+
+<span class="function">saudacao</span>()</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="about" class="about">
+        <div class="container p-60-tb">
+            <div class="section-header text-center m-60-b">
+                <span class="section-badge wow fadeInDown">💡 Sobre o Projeto</span>
+                <h2 class="section-title wow fadeInUp" data-wow-delay="0.1s">Python para Estudantes da PUC</h2>
+                <p class="section-description wow fadeInUp" data-wow-delay="0.2s">
+                    Criado por estudantes, para estudantes. Um guia prático e completo de Python.
+                </p>
+            </div>
+
+            <div class="row gap-20">
+                <div class="c-xs-12 c-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="about-card h-100">
+                        <div class="card-icon">🎯</div>
+                        <h3>Objetivo</h3>
+                        <p>Tornar o aprendizado de Python acessível, divertido e prático para todos os estudantes da PUC, independente do curso ou nível de conhecimento.</p>
+                    </div>
+                </div>
+                <div class="c-xs-12 c-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="about-card h-100">
+                        <div class="card-icon">👥</div>
+                        <h3>Para Quem?</h3>
+                        <p>Para TODOS! Desde quem nunca programou até quem quer aprimorar suas habilidades. Seja de Ciência da Computação, Engenharia, Administração ou qualquer curso.</p>
+                    </div>
+                </div>
+                <div class="c-xs-12 c-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="about-card h-100">
+                        <div class="card-icon">🚀</div>
+                        <h3>Metodologia</h3>
+                        <p>Aprendizado baseado em projetos práticos, com exemplos do dia a dia universitário e exercícios progressivos que consolidam o conhecimento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Níveis -->
+    <section id="levels" class="levels">
+        <div class="container p-60-tb">
+            <div class="section-header text-center m-60-b">
+                <span class="section-badge wow fadeInDown">📚 Trilha de Aprendizado</span>
+                <h2 class="section-title wow fadeInUp" data-wow-delay="0.1s">Três Níveis Para Dominar Python</h2>
+                <p class="section-description wow fadeInUp" data-wow-delay="0.2s">
+                    Do iniciante absoluto ao desenvolvedor confiante. Siga sua jornada!
+                </p>
+            </div>
+
+            <div class="row gap-20">
+                <!-- Nível 1 -->
+                <div class="c-xs-12 c-md-4 wow zoomIn" data-wow-delay="0.1s">
+                    <div class="level-card nivel-1 h-100">
+                        <div class="level-header">
+                        <div class="level-icon">📗</div>
+                        <div class="level-badge">Nível 1</div>
+                    </div>
+                    <h3 class="level-title">Iniciante</h3>
+                    <p class="level-subtitle">Começando do Zero</p>
+                    <p class="level-description">
+                        Aprenda os fundamentos: variáveis, tipos de dados, operações básicas e como fazer o computador conversar com você!
+                    </p>
+                    <div class="level-topics">
+                        <div class="topic">✅ Print e Input</div>
+                        <div class="topic">✅ Variáveis</div>
+                        <div class="topic">✅ Matemática Básica</div>
+                        <div class="topic">✅ Strings</div>
+                        <div class="topic">✅ Primeiro Projeto</div>
+                    </div>
+                    <div class="level-info">
+                        <span>⏱️ 1-2 semanas</span>
+                        <span>🎮 5+ exercícios</span>
+                    </div>
+                        <a href="nivel-1.html" class="btn-level">Começar Nível 1 →</a>
+                    </div>
+                </div>
+
+                <!-- Nível 2 -->
+                <div class="c-xs-12 c-md-4 wow zoomIn" data-wow-delay="0.2s">
+                    <div class="level-card nivel-2 featured h-100">
+                    <div class="featured-badge">🔥 Mais Popular</div>
+                    <div class="level-header">
+                        <div class="level-icon">📘</div>
+                        <div class="level-badge">Nível 2</div>
+                    </div>
+                    <h3 class="level-title">Intermediário</h3>
+                    <p class="level-subtitle">Ficando Esperto</p>
+                    <p class="level-description">
+                        Domine estruturas de controle, loops, listas e funções. Crie seus primeiros jogos e programas interativos!
+                    </p>
+                    <div class="level-topics">
+                        <div class="topic">✅ If/Else</div>
+                        <div class="topic">✅ Loops (For/While)</div>
+                        <div class="topic">✅ Listas</div>
+                        <div class="topic">✅ Funções</div>
+                        <div class="topic">✅ Jogos Interativos</div>
+                    </div>
+                    <div class="level-info">
+                        <span>⏱️ 2-3 semanas</span>
+                        <span>🎮 10+ exercícios</span>
+                    </div>
+                        <a href="nivel-2.html" class="btn-level">Começar Nível 2 →</a>
+                    </div>
+                </div>
+
+                <!-- Nível 3 -->
+                <div class="c-xs-12 c-md-4 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="level-card nivel-3 h-100">
+                    <div class="level-header">
+                        <div class="level-icon">📙</div>
+                        <div class="level-badge">Nível 3</div>
+                    </div>
+                    <h3 class="level-title">Avançado</h3>
+                    <p class="level-subtitle">Virando Ninja</p>
+                    <p class="level-description">
+                        POO, arquivos, bibliotecas e projetos completos. Torne-se um programador Python de verdade!
+                    </p>
+                    <div class="level-topics">
+                        <div class="topic">✅ POO (Classes)</div>
+                        <div class="topic">✅ Arquivos</div>
+                        <div class="topic">✅ Tratamento de Erros</div>
+                        <div class="topic">✅ Módulos</div>
+                        <div class="topic">✅ Projeto Completo</div>
+                    </div>
+                    <div class="level-info">
+                        <span>⏱️ 3-4 semanas</span>
+                        <span>🎮 15+ exercícios</span>
+                    </div>
+                        <a href="nivel-3.html" class="btn-level">Começar Nível 3 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+        <div class="container p-60-tb">
+            <div class="section-header text-center m-60-b">
+                <span class="section-badge wow fadeInDown">⭐ Diferenciais</span>
+                <h2 class="section-title wow fadeInUp" data-wow-delay="0.1s">Por Que Python for PUC?</h2>
+            </div>
+
+            <div class="row gap-20">
+                <div class="c-xs-12 c-sm-6 c-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">🎓</div>
+                        <h3>Feito por Estudantes</h3>
+                        <p>Criado por quem entende as dificuldades e desafios de aprender programação na universidade.</p>
+                    </div>
+                </div>
+                <div class="c-xs-12 c-sm-6 c-md-4 wow fadeInUp" data-wow-delay="0.15s">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">💻</div>
+                        <h3>100% Prático</h3>
+                        <p>Aprenda fazendo! Cada conceito vem com exemplos práticos e exercícios hands-on.</p>
+                    </div>
+                </div>
+                <div class="c-xs-12 c-sm-6 c-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">🎮</div>
+                        <h3>Gamificado</h3>
+                        <p>Desafios, projetos e conquistas tornam o aprendizado mais divertido e motivador.</p>
+                    </div>
+                </div>
+                <div class="c-xs-12 c-sm-6 c-md-4 wow fadeInUp" data-wow-delay="0.25s">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">📱</div>
+                        <h3>Responsivo</h3>
+                        <p>Estude em qualquer dispositivo: computador, tablet ou celular. Sempre disponível!</p>
+                    </div>
+                </div>
+                <div class="c-xs-12 c-sm-6 c-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Progressivo</h3>
+                        <p>Do zero ao avançado de forma gradual e natural. Cada nível prepara você para o próximo.</p>
+                    </div>
+                </div>
+                <div class="c-xs-12 c-sm-6 c-md-4 wow fadeInUp" data-wow-delay="0.35s">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">🤝</div>
+                        <h3>Colaborativo</h3>
+                        <p>Aprenda em grupo! Compartilhe códigos e soluções com seus colegas da PUC.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Pronto Para Começar Sua Jornada?</h2>
+                <p class="cta-description">
+                    Junte-se a centenas de estudantes da PUC que já estão aprendendo Python!
+                </p>
+                <a href="nivel-1.html" class="btn-large btn-primary">
+                    🚀 Começar Agora - É Grátis!
+                </a>
+                <p class="cta-note">
+                    ⏱️ Apenas 15 minutos por dia são suficientes para começar
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom text-center">
+                <div class="logo m-20-b">
+                    <span class="logo-icon">🐍</span>
+                    <span class="logo-text">Python<span class="logo-highlight">for</span>PUC</span>
+                </div>
+                <p class="m-10-b">Aprenda Python de forma divertida e prática!</p>
+                <p class="m-10-b">💜 Feito com amor para sobreviver na PUC | 2026</p>
+                <p>🐍 Python for PUC - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Squeleton Scripts -->
+    <script src="https://cdn.squeleton.dev/squeleton-scripts.v4.min.js"></script>
+
+    <!-- Projeto Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/hacker-effect.js"></script>
+</body>
+</html>

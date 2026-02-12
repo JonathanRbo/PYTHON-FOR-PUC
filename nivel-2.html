@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nível 2 - Intermediário | Python for PUC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nivel.css">
+    <link rel="stylesheet" href="css/effects.css">
+    <link rel="stylesheet" href="css/modal-fix.css">
+    <link rel="stylesheet" href="css/ux-fixes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.squeleton.dev/squeleton.v4.min.css">
+    <script src="https://cdn.squeleton.dev/squeleton-main.v4.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-icon">🐍</span>
+                    <span class="logo-text">Python<span class="logo-highlight">for</span>PUC</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Início</a>
+                    <a href="nivel-1.html" class="nav-link">Nível 1</a>
+                    <a href="nivel-2.html" class="nav-link active">Nível 2</a>
+                    <a href="nivel-3.html" class="nav-link">Nível 3</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="nivel-header nivel-2-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="nivel-badge">📘 Nível 2</div>
+                <h1>Intermediário - Ficando Esperto</h1>
+                <p>Domine estruturas de controle, loops, listas e funções!</p>
+                <div class="progress-bar">
+                    <div class="progress" id="progress-bar"></div>
+                </div>
+                <p class="progress-text">Seu progresso: <span id="progress-percent">0%</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container nivel-container">
+        <aside class="sidebar">
+            <div class="sidebar-sticky">
+                <h3>📚 Conteúdo</h3>
+                <nav class="sidebar-nav">
+                    <a href="#aula-1" class="sidebar-link active">Aula 1: If/Else</a>
+                    <a href="#aula-2" class="sidebar-link">Aula 2: Elif</a>
+                    <a href="#aula-3" class="sidebar-link">Aula 3: While</a>
+                    <a href="#aula-4" class="sidebar-link">Aula 4: For</a>
+                    <a href="#aula-5" class="sidebar-link">Aula 5: Listas</a>
+                    <a href="#aula-6" class="sidebar-link">Aula 6: Funções</a>
+                    <a href="#projeto" class="sidebar-link">🎯 Projeto Final</a>
+                </nav>
+                <div class="sidebar-info">
+                    <p>🔥 <strong>Popular:</strong> Este é o nível mais acessado!</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="content">
+            <section id="aula-1" class="aula-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">Aula 1</span>
+                    <h2>🤔 Tomando Decisões (if/else)</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="text-block wow fadeInUp">
+                        <p>Agora vamos fazer o programa tomar decisões! Se uma coisa acontecer, faz isso. Se não, faz aquilo.</p>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="code-header">
+                            <span>decisoes.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>idade = int(input("Qual sua idade? "))
+
+if idade >= 18:
+    print("Você é maior de idade!")
+    print("Pode dirigir! 🚗")
+else:
+    print("Você é menor de idade")
+    print("Ainda não pode dirigir")</code></pre>
+                    </div>
+
+                    <div class="challenge-box wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="challenge-header">
+                            <span>🎮 Desafio</span>
+                            <button class="toggle-btn cursor-pointer" data-modal-show="solucao-1">Ver Solução</button>
+                        </div>
+                        <p>Crie um verificador de notas: se >= 7 aprovado, senão reprovado!</p>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-1" onchange="updateProgress()">
+                        <label for="check-1">Completei esta aula! ✓</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aula 2 -->
+            <section id="aula-2" class="aula-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">Aula 2</span>
+                    <h2>🔀 Múltiplas Escolhas (elif)</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="text-block wow fadeInUp">
+                        <h3>E se tiver mais de duas opções?</h3>
+                        <p>Às vezes o if/else não é suficiente. E se você tem 3, 4 ou mais opções? Use <code>elif</code>! 🎯</p>
+                        <p>Pense no sistema de notas da PUC: A, B, C, D ou F. Não é só aprovado/reprovado!</p>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="code-header">
+                            <span>conceitos.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>nota = float(input("Digite sua nota (0-10): "))
+
+if nota >= 9:
+    print("📗 Conceito A - Excelente!")
+    print("Você é um gênio!")
+elif nota >= 7:
+    print("📘 Conceito B - Bom!")
+    print("Aprovado com mérito!")
+elif nota >= 5:
+    print("📙 Conceito C - Regular")
+    print("Aprovado, mas pode melhorar")
+elif nota >= 3:
+    print("📕 Conceito D - Insuficiente")
+    print("Recuperação necessária")
+else:
+    print("❌ Conceito F - Reprovado")
+    print("Precisa estudar mais!")</code></pre>
+                    </div>
+
+                    <div class="info-box wow fadeInUp" data-wow-delay="0.15s">
+                        <div class="info-icon">💡</div>
+                        <div>
+                            <h4>Como funciona o elif?</h4>
+                            <ul>
+                                <li><strong>if</strong> - Primeira condição (testa primeiro)</li>
+                                <li><strong>elif</strong> - "E se não for a primeira, tenta esta" (pode ter vários!)</li>
+                                <li><strong>else</strong> - "Se nenhuma acima funcionar" (opcional)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="code-header">
+                            <span>cantina_puc.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>print("=== CANTINA DA PUC ===")
+print("1 - Pão de Queijo (R$ 3,00)")
+print("2 - Coxinha (R$ 4,50)")
+print("3 - Suco (R$ 5,00)")
+print("4 - Café (R$ 2,50)")
+
+escolha = input("\nO que você quer? ")
+
+if escolha == "1":
+    print("🧀 Pão de queijo! Total: R$ 3,00")
+elif escolha == "2":
+    print("🍗 Coxinha! Total: R$ 4,50")
+elif escolha == "3":
+    print("🥤 Suco! Total: R$ 5,00")
+elif escolha == "4":
+    print("☕ Café! Total: R$ 2,50")
+else:
+    print("❌ Opção inválida!")</code></pre>
+                    </div>
+
+                    <div class="tip-box wow fadeInUp" data-wow-delay="0.25s">
+                        <div class="tip-icon">⚡</div>
+                        <div>
+                            <h4>Dica Importante!</h4>
+                            <p>O Python para no PRIMEIRO elif que for verdadeiro! Ele não testa os outros depois.</p>
+                            <p>Por isso a ordem importa! Coloque as condições mais específicas primeiro.</p>
+                        </div>
+                    </div>
+
+                    <div class="challenge-box wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="challenge-header">
+                            <span>🎮 Desafio 2</span>
+                            <button class="toggle-btn cursor-pointer" data-modal-show="solucao-elif">Ver Solução</button>
+                        </div>
+                        <p>Crie um programa que classifica a idade: Criança (0-12), Adolescente (13-17), Adulto (18-59), Idoso (60+)</p>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-2-elif" onchange="updateProgress()">
+                        <label for="check-2-elif">Completei esta aula! ✓</label>
+                    </div>
+                </div>
+            </section>
+
+            <section id="aula-3" class="aula-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">Aula 3</span>
+                    <h2>🔁 Loop While - Repetindo Ações</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="text-block wow fadeInUp">
+                        <p>Quer fazer o programa repetir algo? Use while!</p>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="code-header">
+                            <span>contador.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>contador = 1
+
+while contador <= 5:
+    print("Contagem:", contador)
+    contador = contador + 1
+
+print("Terminei de contar!")</code></pre>
+                    </div>
+
+                    <div class="challenge-box wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="challenge-header">
+                            <span>🎮 Desafio</span>
+                            <button class="toggle-btn cursor-pointer" data-modal-show="solucao-2">Ver Solução</button>
+                        </div>
+                        <p>Jogo de adivinhação: o usuário tenta adivinhar um número de 1 a 10!</p>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-3-while" onchange="updateProgress()">
+                        <label for="check-3-while">Completei esta aula! ✓</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aula 4 -->
+            <section id="aula-4" class="aula-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">Aula 4</span>
+                    <h2>🔄 Loop For - O Rei dos Loops!</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="text-block wow fadeInUp">
+                        <h3>For é mais poderoso que While!</h3>
+                        <p>Quando você sabe QUANTAS VEZES quer repetir, use <code>for</code>! 🚀</p>
+                        <p>É perfeito para percorrer listas, contar números e fazer tarefas repetitivas.</p>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="code-header">
+                            <span>for_basico.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code># Contar de 1 a 5
+for numero in range(1, 6):
+    print("Número:", numero)
+
+# Contar de 0 a 4 (5 vezes)
+for i in range(5):
+    print("Repetição", i)
+
+# Contar de 2 em 2
+for i in range(0, 11, 2):
+    print(i)  # 0, 2, 4, 6, 8, 10</code></pre>
+                    </div>
+
+                    <div class="info-box wow fadeInUp" data-wow-delay="0.15s">
+                        <div class="info-icon">💡</div>
+                        <div>
+                            <h4>Entendendo o range()</h4>
+                            <ul>
+                                <li><code>range(5)</code> - De 0 até 4 (5 números)</li>
+                                <li><code>range(1, 6)</code> - De 1 até 5</li>
+                                <li><code>range(0, 10, 2)</code> - De 0 até 9, pulando de 2 em 2</li>
+                            </ul>
+                            <p><strong>Atenção:</strong> O último número NÃO é incluído!</p>
+                        </div>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="code-header">
+                            <span>for_com_listas.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code># Percorrer lista de matérias
+materias = ["Python", "Cálculo", "Física", "Algoritmos"]
+
+for materia in materias:
+    print("📚 Estudando:", materia)
+
+# Com índice (enumerate)
+print("\n=== COM NÚMERO ===")
+for i, materia in enumerate(materias, 1):
+    print(f"{i}. {materia}")
+
+# Tabuada da PUC (de 1 a 10)
+print("\n=== TABUADA DO 7 ===")
+for i in range(1, 11):
+    resultado = 7 * i
+    print(f"7 x {i} = {resultado}")</code></pre>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.25s">
+                        <div class="code-header">
+                            <span>chamada_puc.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>alunos = ["João", "Maria", "Pedro", "Ana", "Carlos"]
+
+print("=== CHAMADA DA AULA ===")
+presentes = 0
+
+for aluno in alunos:
+    resposta = input(f"{aluno} está presente? (s/n): ")
+    if resposta.lower() == "s":
+        print(f"✅ {aluno} presente!")
+        presentes = presentes + 1
+    else:
+        print(f"❌ {aluno} ausente!")
+
+print(f"\n📊 Total de presentes: {presentes}/{len(alunos)}")</code></pre>
+                    </div>
+
+                    <div class="tip-box wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="tip-icon">⚡</div>
+                        <div>
+                            <h4>For vs While - Quando usar cada um?</h4>
+                            <p><strong>Use FOR quando:</strong> Você sabe quantas vezes vai repetir (contar, percorrer lista)</p>
+                            <p><strong>Use WHILE quando:</strong> Não sabe quantas vezes (até o usuário acertar, menu infinito)</p>
+                        </div>
+                    </div>
+
+                    <div class="challenge-box wow fadeInUp" data-wow-delay="0.35s">
+                        <div class="challenge-header">
+                            <span>🎮 Desafio 4</span>
+                            <button class="toggle-btn cursor-pointer" data-modal-show="solucao-for">Ver Solução</button>
+                        </div>
+                        <p>Calcule a soma de todos os números de 1 a 100 usando for!</p>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-4-for" onchange="updateProgress()">
+                        <label for="check-4-for">Completei esta aula! ✓</label>
+                    </div>
+                </div>
+            </section>
+
+            <section id="aula-5" class="aula-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">Aula 5</span>
+                    <h2>📝 Listas - Guardando Várias Coisas</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="text-block wow fadeInUp">
+                        <p>Listas são como mochilas onde você guarda várias coisas!</p>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="code-header">
+                            <span>listas.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>materias_puc = ["Python", "Cálculo", "Física", "Algoritmos"]
+
+# Mostrar todas
+print(materias_puc)
+
+# Mostrar uma específica
+print(materias_puc[0])  # Python
+
+# Adicionar matéria
+materias_puc.append("Banco de Dados")
+
+# Percorrer lista
+for materia in materias_puc:
+    print("Estudo:", materia)</code></pre>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-5-listas" onchange="updateProgress()">
+                        <label for="check-5-listas">Completei esta aula! ✓</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aula 6 -->
+            <section id="aula-6" class="aula-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">Aula 6</span>
+                    <h2>🎯 Funções - Organizando Seu Código</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="text-block wow fadeInUp">
+                        <h3>Chega de repetir código!</h3>
+                        <p>Funções são como receitas: você escreve UMA VEZ e usa VÁRIAS VEZES! 👨‍🍳</p>
+                        <p>Ao invés de escrever o mesmo código 10 vezes, crie uma função e chame ela!</p>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="code-header">
+                            <span>funcoes_basicas.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code># Criar uma função
+def saudacao():
+    print("Olá, estudante da PUC!")
+    print("Bem-vindo ao Python!")
+
+# Chamar a função (executar)
+saudacao()
+saudacao()  # Pode chamar quantas vezes quiser!
+
+# Função com parâmetros (recebe informações)
+def saudar_aluno(nome):
+    print(f"Olá, {nome}!")
+    print("Bom dia!")
+
+saudar_aluno("João")
+saudar_aluno("Maria")
+saudar_aluno("Pedro")</code></pre>
+                    </div>
+
+                    <div class="info-box wow fadeInUp" data-wow-delay="0.15s">
+                        <div class="info-icon">💡</div>
+                        <div>
+                            <h4>Anatomia de uma função</h4>
+                            <ul>
+                                <li><code>def</code> - Palavra que cria função</li>
+                                <li><code>nome_funcao()</code> - Nome da sua função</li>
+                                <li><code>parametros</code> - Informações que a função recebe</li>
+                                <li><code>return</code> - Valor que a função devolve</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="code-header">
+                            <span>funcoes_com_return.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code># Função que RETORNA um valor
+def calcular_media(nota1, nota2, nota3):
+    media = (nota1 + nota2 + nota3) / 3
+    return media
+
+# Usar o valor retornado
+media_joao = calcular_media(8.5, 9.0, 7.5)
+print(f"Média do João: {media_joao}")
+
+media_maria = calcular_media(10, 9.5, 9.0)
+print(f"Média da Maria: {media_maria}")
+
+# Função que verifica aprovação
+def verificar_aprovacao(media):
+    if media >= 7:
+        return "✅ APROVADO"
+    else:
+        return "❌ REPROVADO"
+
+status_joao = verificar_aprovacao(media_joao)
+print(f"João: {status_joao}")</code></pre>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.25s">
+                        <div class="code-header">
+                            <span>calculadora_puc.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>def somar(a, b):
+    return a + b
+
+def subtrair(a, b):
+    return a - b
+
+def multiplicar(a, b):
+    return a * b
+
+def dividir(a, b):
+    if b == 0:
+        return "Erro: Divisão por zero!"
+    return a / b
+
+# Usando a calculadora
+print("=== CALCULADORA PUC ===")
+num1 = float(input("Primeiro número: "))
+num2 = float(input("Segundo número: "))
+
+print(f"\nSoma: {somar(num1, num2)}")
+print(f"Subtração: {subtrair(num1, num2)}")
+print(f"Multiplicação: {multiplicar(num1, num2)}")
+print(f"Divisão: {dividir(num1, num2)}")</code></pre>
+                    </div>
+
+                    <div class="warning-box wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="warning-icon">⚠️</div>
+                        <div>
+                            <h4>Cuidado com o escopo!</h4>
+                            <p>Variáveis criadas DENTRO da função só existem lá dentro!</p>
+                            <p>Se você criar <code>x = 5</code> dentro da função, não consegue usar <code>x</code> fora dela.</p>
+                        </div>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.35s">
+                        <div class="code-header">
+                            <span>sistema_notas_funcoes.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>def exibir_menu():
+    print("\n=== SISTEMA PUC ===")
+    print("1 - Calcular média")
+    print("2 - Verificar aprovação")
+    print("3 - Sair")
+
+def calcular_media_aluno():
+    nome = input("Nome do aluno: ")
+    n1 = float(input("Nota 1: "))
+    n2 = float(input("Nota 2: "))
+    n3 = float(input("Nota 3: "))
+    media = (n1 + n2 + n3) / 3
+    print(f"\n📊 Média de {nome}: {media:.2f}")
+    return media
+
+def verificar_status(media):
+    if media >= 7:
+        print("✅ Situação: APROVADO!")
+    elif media >= 5:
+        print("⚠️ Situação: RECUPERAÇÃO")
+    else:
+        print("❌ Situação: REPROVADO")
+
+# Programa principal
+while True:
+    exibir_menu()
+    opcao = input("Escolha: ")
+
+    if opcao == "1":
+        media = calcular_media_aluno()
+    elif opcao == "2":
+        media = float(input("Digite a média: "))
+        verificar_status(media)
+    elif opcao == "3":
+        print("👋 Até logo!")
+        break</code></pre>
+                    </div>
+
+                    <div class="tip-box wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="tip-icon">⚡</div>
+                        <div>
+                            <h4>Por que usar funções?</h4>
+                            <p>✅ <strong>Organização:</strong> Código mais limpo e fácil de ler</p>
+                            <p>✅ <strong>Reutilização:</strong> Escreve uma vez, usa mil vezes</p>
+                            <p>✅ <strong>Manutenção:</strong> Corrige em um lugar só</p>
+                            <p>✅ <strong>Trabalho em equipe:</strong> Cada um faz uma função</p>
+                        </div>
+                    </div>
+
+                    <div class="challenge-box wow fadeInUp" data-wow-delay="0.45s">
+                        <div class="challenge-header">
+                            <span>🎮 Desafio 6</span>
+                            <button class="toggle-btn cursor-pointer" data-modal-show="solucao-funcoes">Ver Solução</button>
+                        </div>
+                        <p>Crie uma função chamada <code>calcular_imc(peso, altura)</code> que retorna o IMC e outra função que classifica o IMC (abaixo do peso, normal, sobrepeso, obeso).</p>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-6-funcoes" onchange="updateProgress()">
+                        <label for="check-6-funcoes">Completei esta aula! ✓</label>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projeto" class="aula-section projeto-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">🎯 Projeto Final</span>
+                    <h2>Sistema de Notas da PUC</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="code-header">
+                            <span>sistema_notas_puc.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>alunos = []
+notas = []
+
+print("=== SISTEMA DE NOTAS PUC ===")
+
+while True:
+    print("\n1 - Adicionar aluno")
+    print("2 - Ver alunos")
+    print("3 - Sair")
+
+    opcao = input("Escolha: ")
+
+    if opcao == "1":
+        nome = input("Nome do aluno: ")
+        nota = float(input("Nota: "))
+        alunos.append(nome)
+        notas.append(nota)
+        print("✅ Adicionado!")
+
+    elif opcao == "2":
+        if len(alunos) == 0:
+            print("📝 Nenhum aluno cadastrado")
+        else:
+            print("\n=== LISTA DE ALUNOS ===")
+            for i in range(len(alunos)):
+                status = "✅ APROVADO" if notas[i] >= 7 else "❌ REPROVADO"
+                print(f"{alunos[i]}: {notas[i]} - {status}")
+
+    elif opcao == "3":
+        print("👋 Até logo!")
+        break</code></pre>
+                    </div>
+
+                    <div class="success-box">
+                        <div class="success-icon">🎉</div>
+                        <div>
+                            <h4>Parabéns!</h4>
+                            <p>Você dominou o Nível 2! Agora você sabe:</p>
+                            <ul>
+                                <li>✅ Tomar decisões com if/else</li>
+                                <li>✅ Repetir ações com loops</li>
+                                <li>✅ Trabalhar com listas</li>
+                                <li>✅ Criar funções</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="next-level">
+                        <h3>🚀 Pronto para o nível avançado?</h3>
+                        <p>No Nível 3 você vai criar sistemas completos com POO e arquivos!</p>
+                        <a href="nivel-3.html" class="btn-large btn-primary">Ir para Nível 3 →</a>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-projeto" onchange="updateProgress()">
+                        <label for="check-projeto">Completei o projeto final! ✓</label>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>💜 Python for PUC - Feito por estudantes, para estudantes</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Solução 1 -->
+    <div data-modal="solucao-1" class="modal-dialog" aria-hidden="true">
+        <div class="dialog-content">
+            <div class="dialog-backdrop" data-modal-hide></div>
+            <div class="dialog-inline w-600px xs-w-90">
+                <button class="dialog-close" data-modal-hide></button>
+                <div class="modal-popup border-rd-10 p-30-all">
+                    <h3 class="fs-11 m-20-b">✅ Solução do Desafio 1</h3>
+                    <div class="code-block">
+                        <pre><code>nota = float(input("Sua nota: "))
+
+if nota >= 7:
+    print("✅ APROVADO!")
+    print("Parabéns!")
+else:
+    print("❌ REPROVADO")
+    print("Estude mais!")</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Solução 2 -->
+    <div data-modal="solucao-2" class="modal-dialog" aria-hidden="true">
+        <div class="dialog-content">
+            <div class="dialog-backdrop" data-modal-hide></div>
+            <div class="dialog-inline w-600px xs-w-90">
+                <button class="dialog-close" data-modal-hide></button>
+                <div class="modal-popup border-rd-10 p-30-all">
+                    <h3 class="fs-11 m-20-b">✅ Solução do Desafio 2</h3>
+                    <div class="code-block">
+                        <pre><code>numero_secreto = 7
+
+while True:
+    palpite = int(input("Adivinhe (1-10): "))
+
+    if palpite == numero_secreto:
+        print("🎉 ACERTOU!")
+        break
+    elif palpite < numero_secreto:
+        print("📈 Muito baixo!")
+    else:
+        print("📉 Muito alto!")</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Solução Elif -->
+    <div data-modal="solucao-elif" class="modal-dialog" aria-hidden="true">
+        <div class="dialog-content">
+            <div class="dialog-backdrop" data-modal-hide></div>
+            <div class="dialog-inline w-600px xs-w-90">
+                <button class="dialog-close" data-modal-hide></button>
+                <div class="modal-popup border-rd-10 p-30-all">
+                    <h3 class="fs-11 m-20-b">✅ Solução do Desafio Elif</h3>
+                    <div class="code-block">
+                        <pre><code>idade = int(input("Digite sua idade: "))
+
+if idade <= 12:
+    print("👶 Você é uma criança!")
+elif idade <= 17:
+    print("🧒 Você é um adolescente!")
+elif idade <= 59:
+    print("👨 Você é um adulto!")
+else:
+    print("👴 Você é um idoso!")
+
+print("\nClassificação realizada com sucesso!")</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Solução For -->
+    <div data-modal="solucao-for" class="modal-dialog" aria-hidden="true">
+        <div class="dialog-content">
+            <div class="dialog-backdrop" data-modal-hide></div>
+            <div class="dialog-inline w-600px xs-w-90">
+                <button class="dialog-close" data-modal-hide></button>
+                <div class="modal-popup border-rd-10 p-30-all">
+                    <h3 class="fs-11 m-20-b">✅ Solução do Desafio For</h3>
+                    <div class="code-block">
+                        <pre><code>soma = 0
+
+for numero in range(1, 101):
+    soma = soma + numero
+
+print(f"A soma de 1 a 100 é: {soma}")
+
+# Ou usando a fórmula matemática (mais eficiente!)
+# soma = (100 * 101) / 2
+# print(f"Soma: {soma}")</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Solução Funções -->
+    <div data-modal="solucao-funcoes" class="modal-dialog" aria-hidden="true">
+        <div class="dialog-content">
+            <div class="dialog-backdrop" data-modal-hide></div>
+            <div class="dialog-inline w-600px xs-w-90">
+                <button class="dialog-close" data-modal-hide></button>
+                <div class="modal-popup border-rd-10 p-30-all">
+                    <h3 class="fs-11 m-20-b">✅ Solução do Desafio Funções</h3>
+                    <div class="code-block">
+                        <pre><code>def calcular_imc(peso, altura):
+    imc = peso / (altura ** 2)
+    return imc
+
+def classificar_imc(imc):
+    if imc < 18.5:
+        return "⚠️ Abaixo do peso"
+    elif imc < 25:
+        return "✅ Peso normal"
+    elif imc < 30:
+        return "⚠️ Sobrepeso"
+    else:
+        return "❌ Obesidade"
+
+# Testando as funções
+peso = float(input("Seu peso (kg): "))
+altura = float(input("Sua altura (m): "))
+
+meu_imc = calcular_imc(peso, altura)
+classificacao = classificar_imc(meu_imc)
+
+print(f"\n📊 Seu IMC: {meu_imc:.2f}")
+print(f"📋 Classificação: {classificacao}")</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/nivel.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="https://cdn.squeleton.dev/squeleton-scripts.v4.min.js"></script>
+    <script src="js/modal-init.js"></script>
+</body>
+</html>

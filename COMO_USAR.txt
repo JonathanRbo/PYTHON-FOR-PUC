@@ -1,0 +1,158 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║              🐍 PYTHON FOR PUC - GUIA RÁPIDO 🐍              ║
+║                                                               ║
+║         Aprenda Python de Forma Divertida e Prática!         ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+📚 O QUE VOCÊ TEM AQUI:
+
+✅ Arquivos Markdown (.md) - Material de estudo para ler
+✅ Site Interativo - Aprenda de forma visual e prática
+✅ 3 Níveis Completos - Do iniciante ao avançado
+✅ Projetos Práticos - Crie programas reais!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 COMO COMEÇAR:
+
+OPÇÃO 1 - SITE INTERATIVO (RECOMENDADO!)
+═══════════════════════════════════════════
+
+1. Na pasta principal "treino"
+2. Clique duas vezes em "index.html"
+3. Pronto! O site abre no navegador
+4. Comece pelo Nível 1!
+
+💡 Dica: Use Chrome, Edge ou Firefox para melhor experiência
+
+
+OPÇÃO 2 - ARQUIVOS MARKDOWN
+════════════════════════════
+
+1. Entre na pasta "docs"
+2. Abra o arquivo "README.md" para visão geral
+3. Depois abra "nivel-1-iniciante.md"
+4. Copie os códigos e teste no Python
+5. Continue com nível-2 e nível-3
+
+💡 Dica: Abra os .md com VS Code ou qualquer editor de texto
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📖 ESTRUTURA DE APRENDIZADO:
+
+📗 NÍVEL 1 - INICIANTE (1-2 semanas)
+   • Aula 1: Olá, Mundo!
+   • Aula 2: Variáveis
+   • Aula 3: Matemática
+   • Aula 4: Input
+   • Aula 5: Tipos de Dados
+   • Projeto: Criador de Histórias
+
+📘 NÍVEL 2 - INTERMEDIÁRIO (2-3 semanas)
+   • Aula 1: If/Else
+   • Aula 2: Elif
+   • Aula 3: While
+   • Aula 4: For
+   • Aula 5: Listas
+   • Aula 6: Funções
+   • Projeto: Sistema de Notas
+
+📙 NÍVEL 3 - AVANÇADO (3-4 semanas)
+   • Aula 1: POO - Classes
+   • Aula 2: Herança
+   • Aula 3: Arquivos
+   • Aula 4: Tratamento de Erros
+   • Aula 5: Módulos
+   • Projeto: Sistema Completo
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 DICAS IMPORTANTES:
+
+✓ Digite os códigos (não apenas copie!)
+✓ Faça TODOS os exercícios
+✓ Tente resolver os desafios antes de ver a solução
+✓ Pratique pelo menos 15 minutos por dia
+✓ Estude em grupo - é mais divertido!
+✓ Não pule níveis - cada um prepara para o próximo
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 FUNCIONALIDADES DO SITE:
+
+• 📋 Copiar Código - Botão em cada exemplo
+• 🎮 Desafios Interativos - Com soluções
+• 📊 Barra de Progresso - Acompanhe seu avanço
+• ✅ Checkboxes - Marque aulas completas
+• 🎉 Celebrações - Quando completar 100%
+• 💾 Salva Automaticamente - Seu progresso não se perde
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🆘 PRECISA DE AJUDA?
+
+1. Leia o arquivo "site/README.md" para detalhes
+2. Pesquise no Google: "python [sua dúvida]"
+3. Pergunte para colegas da PUC
+4. Reveja a aula anterior se estiver difícil
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📱 COMPATIBILIDADE:
+
+✅ Windows, Mac, Linux
+✅ Chrome, Firefox, Edge, Safari
+✅ Desktop, Tablet, Celular
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎓 PARA GRUPOS DE ESTUDO DA PUC:
+
+• Cada um estuda em casa
+• Façam sessões para resolver desafios juntos
+• Compartilhem códigos e soluções
+• Ensinem uns aos outros
+• Celebrem as conquistas!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🌟 LEMBRE-SE:
+
+"Todo programador já foi iniciante um dia!"
+
+Não desista! Python é mais fácil do que parece.
+Com prática diária, você vai longe!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 BOM ESTUDOS!
+
+Criado com 💜 por estudantes da PUC
+Para estudantes da PUC
+
+🐍 Python for PUC - 2026
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ATALHOS RÁPIDOS:
+
+📖 Material Markdown (pasta docs/):
+   • docs/README.md - Visão geral
+   • docs/nivel-1-iniciante.md - Comece aqui
+   • docs/nivel-2-intermediario.md - Continue aqui
+   • docs/nivel-3-avancado.md - Finalize aqui
+
+🌐 Site Interativo:
+   • index.html - Página inicial
+   • nivel-1.html - Nível 1
+   • nivel-2.html - Nível 2
+   • nivel-3.html - Nível 3
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+AGORA É COM VOCÊ! 🚀
+
+Abra o site e comece sua jornada Python AGORA!

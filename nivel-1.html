@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nível 1 - Iniciante | Python for PUC</title>
+    <!-- Squeleton Framework -->
+    <link rel="stylesheet" href="https://cdn.squeleton.dev/squeleton.v4.min.css">
+    <script src="https://cdn.squeleton.dev/squeleton-main.v4.min.js"></script>
+
+    <!-- Projeto Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nivel.css">
+    <link rel="stylesheet" href="css/effects.css">
+    <link rel="stylesheet" href="css/modal-fix.css">
+    <link rel="stylesheet" href="css/ux-fixes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-icon">🐍</span>
+                    <span class="logo-text">Python<span class="logo-highlight">for</span>PUC</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Início</a>
+                    <a href="nivel-1.html" class="nav-link active">Nível 1</a>
+                    <a href="nivel-2.html" class="nav-link">Nível 2</a>
+                    <a href="nivel-3.html" class="nav-link">Nível 3</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="nivel-header nivel-1-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="nivel-badge">📗 Nível 1</div>
+                <h1>Iniciante - Começando do Zero</h1>
+                <p>Aprenda os fundamentos de Python: variáveis, operações, entrada e saída de dados</p>
+                <div class="progress-bar">
+                    <div class="progress" id="progress-bar"></div>
+                </div>
+                <p class="progress-text">Seu progresso: <span id="progress-percent">0%</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container nivel-container">
+        <aside class="sidebar">
+            <div class="sidebar-sticky">
+                <h3>📚 Conteúdo</h3>
+                <nav class="sidebar-nav">
+                    <a href="#aula-1" class="sidebar-link active">Aula 1: Olá, Mundo!</a>
+                    <a href="#aula-2" class="sidebar-link">Aula 2: Variáveis</a>
+                    <a href="#aula-3" class="sidebar-link">Aula 3: Matemática</a>
+                    <a href="#aula-4" class="sidebar-link">Aula 4: Input</a>
+                    <a href="#aula-5" class="sidebar-link">Aula 5: Tipos de Dados</a>
+                    <a href="#projeto" class="sidebar-link">🎯 Projeto Final</a>
+                </nav>
+                <div class="sidebar-info">
+                    <p>💡 <strong>Dica:</strong> Pratique cada exemplo antes de avançar!</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="content">
+            <!-- Aula 1 -->
+            <section id="aula-1" class="aula-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">Aula 1</span>
+                    <h2>🌟 Seu Primeiro "Olá, Mundo!"</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="text-block wow fadeInUp">
+                        <h3>O que é Python?</h3>
+                        <p>Python é como uma língua que você usa para conversar com o computador! 🗣️💻</p>
+                        <p>Imagine que você tem um robô amigo que só entende Python. Quando você fala Python, ele faz tudo que você pedir!</p>
+                    </div>
+
+                    <div class="code-block wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="code-header">
+                            <span>primeiro_programa.py</span>
+                            <button class="copy-btn cursor-pointer" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>print("Olá, Mundo!")</code></pre>
+                    </div>
+
+                    <div class="info-box wow fadeInUp" data-wow-delay="0.15s">
+                        <div class="info-icon">💡</div>
+                        <div>
+                            <h4>Entendendo o código</h4>
+                            <ul>
+                                <li><code>print()</code> - Pede pro computador MOSTRAR algo na tela</li>
+                                <li><code>"Olá, Mundo!"</code> - Tudo entre aspas é TEXTO</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="challenge-box wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="challenge-header">
+                            <span>🎮 Desafio 1</span>
+                            <button class="toggle-btn cursor-pointer" data-modal-show="solucao-1">Ver Solução</button>
+                        </div>
+                        <p>Faça o computador dizer seu nome, sua idade e sua comida favorita!</p>
+                    </div>
+
+                    <!-- Modal Solução 1 -->
+                    <div data-modal="solucao-1" class="modal-dialog" aria-hidden="true">
+                        <div class="dialog-content">
+                            <div class="dialog-backdrop" data-modal-hide></div>
+                            <div class="dialog-inline w-600px xs-w-90">
+                                <button class="dialog-close" data-modal-hide></button>
+                                <div class="modal-popup border-rd-10 p-30-all">
+                                    <h3 class="fs-11 m-20-b">✅ Solução do Desafio 1</h3>
+                                    <div class="code-block">
+                                        <pre><code>print("Meu nome é João")
+print("Tenho 20 anos")
+print("Estudo na PUC!")
+print("Amo pizza!")</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-1" onchange="updateProgress()">
+                        <label for="check-1">Completei esta aula! ✓</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aula 2 -->
+            <section id="aula-2" class="aula-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">Aula 2</span>
+                    <h2>🎨 Variáveis - Caixinhas Mágicas</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="text-block">
+                        <h3>O que são variáveis?</h3>
+                        <p>Variáveis são como caixinhas onde você guarda informações! 📦</p>
+                        <p>Imagine que você tem várias caixas: uma com seu nome, uma com sua idade, uma com seus pontos no jogo.</p>
+                    </div>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>variaveis.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code># Guardando informações
+nome = "Ana"
+idade = 20
+curso = "Ciência da Computação"
+universidade = "PUC"
+
+# Mostrando na tela
+print(nome)
+print(idade)
+print(curso)
+print(universidade)</code></pre>
+                    </div>
+
+                    <div class="tip-box">
+                        <div class="tip-icon">⚡</div>
+                        <div>
+                            <h4>Regras para nomes de variáveis</h4>
+                            <p><strong>✅ PODE:</strong> meu_nome, idade_pessoa, pontos_jogo</p>
+                            <p><strong>❌ NÃO PODE:</strong> meu nome (sem espaço!), 2idade (não começa com número!)</p>
+                        </div>
+                    </div>
+
+                    <div class="challenge-box wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="challenge-header">
+                            <span>🎮 Desafio 2</span>
+                            <button class="toggle-btn cursor-pointer" data-modal-show="solucao-2">Ver Solução</button>
+                        </div>
+                        <p>Crie variáveis para: seu nome, idade, curso e universidade. Depois mostre tudo!</p>
+                    </div>
+
+                    <!-- Modal Solução 2 -->
+                    <div data-modal="solucao-2" class="modal-dialog" aria-hidden="true">
+                        <div class="dialog-content">
+                            <div class="dialog-backdrop" data-modal-hide></div>
+                            <div class="dialog-inline w-600px xs-w-90">
+                                <button class="dialog-close" data-modal-hide></button>
+                                <div class="modal-popup border-rd-10 p-30-all">
+                                    <h3 class="fs-11 m-20-b">✅ Solução do Desafio 2</h3>
+                                    <div class="code-block">
+                                        <pre><code>nome = "Maria"
+idade = 19
+curso = "Engenharia"
+universidade = "PUC"
+
+print("Nome:", nome)
+print("Idade:", idade)
+print("Curso:", curso)
+print("Universidade:", universidade)</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-2" onchange="updateProgress()">
+                        <label for="check-2">Completei esta aula! ✓</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aula 3 -->
+            <section id="aula-3" class="aula-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">Aula 3</span>
+                    <h2>🔢 Matemática com Python</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="text-block">
+                        <p>Python é uma calculadora super poderosa! 🧮</p>
+                    </div>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>matematica.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code># Operações básicas
+print(5 + 3)    # Soma: 8
+print(10 - 4)   # Subtração: 6
+print(6 * 7)    # Multiplicação: 42
+print(20 / 4)   # Divisão: 5.0
+print(2 ** 3)   # Potência: 8 (2x2x2)
+
+# Usando variáveis
+nota1 = 8.5
+nota2 = 7.0
+nota3 = 9.0
+
+media = (nota1 + nota2 + nota3) / 3
+print("Média:", media)</code></pre>
+                    </div>
+
+                    <div class="challenge-box wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="challenge-header">
+                            <span>🎮 Desafio 3</span>
+                            <button class="toggle-btn cursor-pointer" data-modal-show="solucao-3">Ver Solução</button>
+                        </div>
+                        <p>Crie uma calculadora que faz todas as operações com dois números!</p>
+                    </div>
+
+                    <!-- Modal Solução 3 -->
+                    <div data-modal="solucao-3" class="modal-dialog" aria-hidden="true">
+                        <div class="dialog-content">
+                            <div class="dialog-backdrop" data-modal-hide></div>
+                            <div class="dialog-inline w-600px xs-w-90">
+                                <button class="dialog-close" data-modal-hide></button>
+                                <div class="modal-popup border-rd-10 p-30-all">
+                                    <h3 class="fs-11 m-20-b">✅ Solução do Desafio 3</h3>
+                                    <div class="code-block">
+                                        <pre><code>numero1 = 15
+numero2 = 3
+
+print("Soma:", numero1 + numero2)
+print("Subtração:", numero1 - numero2)
+print("Multiplicação:", numero1 * numero2)
+print("Divisão:", numero1 / numero2)
+print("Potência:", numero1 ** numero2)</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-3" onchange="updateProgress()">
+                        <label for="check-3">Completei esta aula! ✓</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aula 4 -->
+            <section id="aula-4" class="aula-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">Aula 4</span>
+                    <h2>💬 Conversando com o Usuário</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="text-block">
+                        <p>E se o COMPUTADOR perguntar algo pra gente? Use <code>input()</code>! 🤝</p>
+                    </div>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>input_exemplo.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>nome = input("Qual é o seu nome? ")
+curso = input("Qual seu curso? ")
+
+print("Olá,", nome + "!")
+print("Que legal que você estuda", curso, "na PUC!")</code></pre>
+                    </div>
+
+                    <div class="challenge-box wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="challenge-header">
+                            <span>🎮 Desafio 4</span>
+                            <button class="toggle-btn cursor-pointer" data-modal-show="solucao-4">Ver Solução</button>
+                        </div>
+                        <p>Crie um questionário que pergunta nome, curso e semestre. Depois mostre tudo!</p>
+                    </div>
+
+                    <!-- Modal Solução 4 -->
+                    <div data-modal="solucao-4" class="modal-dialog" aria-hidden="true">
+                        <div class="dialog-content">
+                            <div class="dialog-backdrop" data-modal-hide></div>
+                            <div class="dialog-inline w-600px xs-w-90">
+                                <button class="dialog-close" data-modal-hide></button>
+                                <div class="modal-popup border-rd-10 p-30-all">
+                                    <h3 class="fs-11 m-20-b">✅ Solução do Desafio 4</h3>
+                                    <div class="code-block">
+                                        <pre><code>print("=== CADASTRO PUC ===")
+nome = input("Seu nome: ")
+curso = input("Seu curso: ")
+semestre = input("Semestre: ")
+
+print("\n=== SEUS DADOS ===")
+print("Nome:", nome)
+print("Curso:", curso)
+print("Semestre:", semestre)</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-4" onchange="updateProgress()">
+                        <label for="check-4">Completei esta aula! ✓</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aula 5 -->
+            <section id="aula-5" class="aula-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">Aula 5</span>
+                    <h2>🧮 Números e Textos são Diferentes!</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="warning-box">
+                        <div class="warning-icon">⚠️</div>
+                        <div>
+                            <h4>Cuidado!</h4>
+                            <p>O <code>input()</code> SEMPRE guarda as coisas como TEXTO!</p>
+                            <p>"5" + "3" = "53" (juntou textos) ≠ 5 + 3 = 8 (soma)</p>
+                        </div>
+                    </div>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>conversao.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code># Convertendo para número
+numero1 = int(input("Digite um número: "))
+numero2 = int(input("Digite outro número: "))
+resultado = numero1 + numero2
+print("A soma é:", resultado)
+
+# Com decimais
+altura = float(input("Sua altura em metros: "))
+peso = float(input("Seu peso em kg: "))
+imc = peso / (altura ** 2)
+print("Seu IMC é:", imc)</code></pre>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-icon">💡</div>
+                        <div>
+                            <h4>Tipos de conversão</h4>
+                            <ul>
+                                <li><code>int()</code> - Número INTEIRO (1, 2, 3...)</li>
+                                <li><code>float()</code> - Número COM VÍRGULA (3.14, 2.5...)</li>
+                                <li><code>str()</code> - TEXTO ("123", "olá"...)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="challenge-box wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="challenge-header">
+                            <span>🎮 Desafio 5</span>
+                            <button class="toggle-btn cursor-pointer" data-modal-show="solucao-5">Ver Solução</button>
+                        </div>
+                        <p>Crie uma calculadora de média de notas! Pergunte 3 notas e calcule a média.</p>
+                    </div>
+
+                    <!-- Modal Solução 5 -->
+                    <div data-modal="solucao-5" class="modal-dialog" aria-hidden="true">
+                        <div class="dialog-content">
+                            <div class="dialog-backdrop" data-modal-hide></div>
+                            <div class="dialog-inline w-600px xs-w-90">
+                                <button class="dialog-close" data-modal-hide></button>
+                                <div class="modal-popup border-rd-10 p-30-all">
+                                    <h3 class="fs-11 m-20-b">✅ Solução do Desafio 5</h3>
+                                    <div class="code-block">
+                                        <pre><code>print("=== CALCULADORA DE MÉDIA ===")
+
+nota1 = float(input("Nota 1: "))
+nota2 = float(input("Nota 2: "))
+nota3 = float(input("Nota 3: "))
+
+media = (nota1 + nota2 + nota3) / 3
+
+print("\nSua média é:", round(media, 2))
+
+if media >= 7:
+    print("Você está APROVADO! 🎉")
+else:
+    print("Precisa estudar mais! 📚")</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-5" onchange="updateProgress()">
+                        <label for="check-5">Completei esta aula! ✓</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projeto Final -->
+            <section id="projeto" class="aula-section projeto-section wow bounceIn">
+                <div class="aula-header">
+                    <span class="aula-number">🎯 Projeto Final</span>
+                    <h2>Criador de Histórias da PUC</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="text-block">
+                        <p>Vamos criar um programa que gera histórias engraçadas sobre a vida universitária! 📖✨</p>
+                    </div>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>projeto_historia_puc.py</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copiar</button>
+                        </div>
+                        <pre><code>print("=== GERADOR DE HISTÓRIAS DA PUC ===")
+print("Responda as perguntas para criar sua história!\n")
+
+# Coletando informações
+nome = input("Seu nome: ")
+curso = input("Seu curso: ")
+materia = input("Matéria favorita: ")
+professor = input("Nome de um professor: ")
+lugar_puc = input("Lugar favorito na PUC: ")
+comida = input("Comida da cantina: ")
+nota = input("Uma nota (0-10): ")
+
+# Criando a história
+print("\n" + "="*50)
+print("SUA HISTÓRIA DA PUC:")
+print("="*50 + "\n")
+
+print("Era uma vez um(a) estudante chamado(a)", nome)
+print("que cursava", curso, "na PUC.")
+print("\nUm dia, durante a aula de", materia + ",")
+print("o professor", professor, "deu um trabalho difícil.")
+print(nome, "ficou estudando em", lugar_puc)
+print("comendo", comida, "para ter energia!")
+print("\nNo final, conseguiu tirar", nota, "na prova!")
+print("\n🎓 E todos aplaudiram de pé!")
+print("FIM! 🎉")</code></pre>
+                    </div>
+
+                    <div class="success-box">
+                        <div class="success-icon">🎉</div>
+                        <div>
+                            <h4>Parabéns!</h4>
+                            <p>Você completou o Nível 1! Agora você sabe:</p>
+                            <ul>
+                                <li>✅ Usar print() e input()</li>
+                                <li>✅ Criar e usar variáveis</li>
+                                <li>✅ Fazer operações matemáticas</li>
+                                <li>✅ Converter tipos de dados</li>
+                                <li>✅ Criar programas interativos!</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="next-level">
+                        <h3>🚀 Pronto para o próximo desafio?</h3>
+                        <p>No Nível 2 você vai aprender a tomar decisões, criar loops e fazer jogos!</p>
+                        <a href="nivel-2.html" class="btn-large btn-primary">Ir para Nível 2 →</a>
+                    </div>
+
+                    <div class="complete-check">
+                        <input type="checkbox" id="check-6" onchange="updateProgress()">
+                        <label for="check-6">Completei o projeto final! ✓</label>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>💜 Python for PUC - Feito por estudantes, para estudantes</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Squeleton Scripts -->
+    <script src="https://cdn.squeleton.dev/squeleton-scripts.v4.min.js"></script>
+
+    <!-- Projeto Scripts -->
+    <script src="js/modal-init.js"></script>
+    <script src="js/nivel.js"></script>
+    <script src="js/effects.js"></script>
+</body>
+</html>
