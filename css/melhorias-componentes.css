@@ -1,0 +1,567 @@
+/**
+ * COMPONENTES DAS MELHORIAS - Python for PUC
+ * Estilos para: Hints, Conquistas, Busca, Challenges
+ */
+
+/* ============================================
+   SISTEMA DE HINTS PROGRESSIVOS
+   ============================================ */
+
+.challenge {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.challenge::before {
+    content: '🎮';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 32px;
+    opacity: 0.3;
+}
+
+.challenge h4 {
+    color: #3B82F6;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.challenge-description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.hints-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.hint-btn {
+    background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.hint-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5);
+}
+
+.hint-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.hint {
+    background: rgba(251, 191, 36, 0.1);
+    border-left: 4px solid #F59E0B;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.hint::before {
+    content: '💡 ';
+    font-size: 18px;
+}
+
+/* ============================================
+   CONQUISTAS (ACHIEVEMENTS)
+   ============================================ */
+
+.achievement-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+    margin: 5px;
+}
+
+.achievement-card {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(124, 58, 237, 0.05) 100%);
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.achievement-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+    border-color: #8B5CF6;
+}
+
+.achievement-card.locked {
+    opacity: 0.4;
+    filter: grayscale(100%);
+    cursor: not-allowed;
+}
+
+.achievement-card.locked:hover {
+    transform: none;
+}
+
+.achievement-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.achievement-name {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.achievement-description {
+    font-size: 14px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* ============================================
+   SISTEMA DE BUSCA
+   ============================================ */
+
+.search-container {
+    max-width: 400px;
+}
+
+.search-bar {
+    animation: fadeInDown 0.3s ease;
+}
+
+#search-input {
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#search-input:focus {
+    border-color: #3B82F6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.search-results {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.search-result-item {
+    transition: all 0.2s ease;
+}
+
+.search-result-item:hover {
+    background: rgba(59, 130, 246, 0.2) !important;
+    transform: translateX(5px);
+}
+
+#toggle-search {
+    background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+    color: white;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+#toggle-search:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5);
+}
+
+/* ============================================
+   BARRA DE PROGRESSO MELHORADA
+   ============================================ */
+
+.progress-bar {
+    background: rgba(255, 255, 255, 0.1);
+    height: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #10B981 0%, #059669 100%);
+    border-radius: 10px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.5);
+}
+
+.progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.progress-text {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.progress-text span {
+    color: #10B981;
+    font-size: 18px;
+}
+
+/* ============================================
+   CHECKBOXES PERSONALIZADOS
+   ============================================ */
+
+.lesson-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #3B82F6;
+}
+
+.lesson-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    margin: 8px 0;
+}
+
+.lesson-item:hover {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.lesson-item.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+/* ============================================
+   BOTÃO VOLTAR AO TOPO
+   ============================================ */
+
+#back-to-top {
+    transition: all 0.3s ease;
+}
+
+#back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6) !important;
+}
+
+#back-to-top:active {
+    transform: translateY(-1px);
+}
+
+/* ============================================
+   SEÇÃO DE ERROS COMUNS
+   ============================================ */
+
+.error-section {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.05) 100%);
+    border: 2px solid rgba(239, 68, 68, 0.3);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+.error-section h3 {
+    color: #EF4444;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.error-section h3::before {
+    content: '⚠️ ';
+    font-size: 24px;
+}
+
+.error-example {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.error-example .error-title {
+    color: #EF4444;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.error-example .error-why {
+    color: #F59E0B;
+    margin-top: 10px;
+    padding-left: 15px;
+    border-left: 3px solid #F59E0B;
+}
+
+.error-example .error-fix {
+    color: #10B981;
+    margin-top: 10px;
+    padding-left: 15px;
+    border-left: 3px solid #10B981;
+}
+
+/* ============================================
+   GLOSSÁRIO INTERATIVO
+   ============================================ */
+
+.glossary-term {
+    display: inline;
+    color: #3B82F6;
+    font-weight: 600;
+    cursor: help;
+    text-decoration: underline dotted;
+    position: relative;
+}
+
+.glossary-term:hover {
+    color: #2563EB;
+}
+
+/* Tooltip do glossário (usando Balloon.css já integrado) */
+.glossary-term[aria-label] {
+    text-decoration: underline dotted #3B82F6;
+}
+
+/* ============================================
+   TESTE DE CONHECIMENTO
+   ============================================ */
+
+.quiz-container {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);
+    border: 2px solid rgba(16, 185, 129, 0.3);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+.quiz-container h3 {
+    color: #10B981;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.quiz-container h3::before {
+    content: '✅ ';
+    font-size: 24px;
+}
+
+.quiz-question {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.quiz-question p {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.quiz-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quiz-option:hover {
+    background: rgba(16, 185, 129, 0.2);
+}
+
+.quiz-option input[type="radio"] {
+    accent-color: #10B981;
+}
+
+.quiz-result {
+    background: rgba(16, 185, 129, 0.2);
+    border: 2px solid #10B981;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ============================================
+   CHEAT SHEET (RESUMO)
+   ============================================ */
+
+.cheat-sheet {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(124, 58, 237, 0.05) 100%);
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+.cheat-sheet h3 {
+    color: #8B5CF6;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cheat-sheet h3::before {
+    content: '📄 ';
+    font-size: 24px;
+}
+
+.cheat-sheet table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.cheat-sheet th,
+.cheat-sheet td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cheat-sheet th {
+    background: rgba(139, 92, 246, 0.2);
+    font-weight: 700;
+}
+
+.cheat-sheet code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+}
+
+/* ============================================
+   TEMPO DE LEITURA
+   ============================================ */
+
+.reading-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(59, 130, 246, 0.2);
+    color: #3B82F6;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .challenge {
+        padding: 20px;
+    }
+
+    .challenge::before {
+        font-size: 24px;
+    }
+
+    .hints-container {
+        flex-direction: column;
+    }
+
+    .hint-btn {
+        width: 100%;
+    }
+
+    .search-container {
+        left: 10px;
+        right: 10px;
+        max-width: none;
+    }
+
+    #back-to-top {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px;
+    }
+
+    .achievement-card {
+        padding: 15px;
+    }
+
+    .error-section,
+    .quiz-container,
+    .cheat-sheet {
+        padding: 20px;
+    }
+}
+
+/* ============================================
+   ANIMAÇÕES CUSTOMIZADAS
+   ============================================ */
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+    }
+}
+
+.glow-effect {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Flash highlight ao buscar */
+@keyframes flash-highlight {
+    0%, 100% { background-color: transparent; }
+    50% { background-color: rgba(251, 191, 36, 0.3); }
+}
+
+.highlight-flash {
+    animation: flash-highlight 1s ease-in-out 2;
+}

@@ -52,4 +52,6 @@ Paleta azul profissional:
 - Azul Claro: `#3B82F6`
 - Azul Suave: `#60A5FA`
 
-## 💜 Feito com amor para sobreviver na PUC
+## 💜 Criado com amor por estudantes da PUC
+
+**🚀 [Abra index.html e comece agora!](index.html)**
