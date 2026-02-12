@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/effects.css">
     <link rel="stylesheet" href="css/modal-fix.css">
     <link rel="stylesheet" href="css/ux-fixes.css">
+    <link rel="stylesheet" href="css/melhorias-componentes.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -58,6 +59,7 @@
                     <a href="#aula-3" class="sidebar-link">Aula 3: Matemática</a>
                     <a href="#aula-4" class="sidebar-link">Aula 4: Input</a>
                     <a href="#aula-5" class="sidebar-link">Aula 5: Tipos de Dados</a>
+                    <a href="#resumo" class="sidebar-link">📄 Resumo (Cheat Sheet)</a>
                     <a href="#projeto" class="sidebar-link">🎯 Projeto Final</a>
                 </nav>
                 <div class="sidebar-info">
@@ -175,35 +177,36 @@ print(universidade)</code></pre>
                         </div>
                     </div>
 
-                    <div class="challenge-box wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="challenge-header">
-                            <span>🎮 Desafio 2</span>
-                            <button class="toggle-btn cursor-pointer" data-modal-show="solucao-2">Ver Solução</button>
+                    <!-- SISTEMA DE HINTS PROGRESSIVOS -->
+                    <div class="challenge wow fadeInUp" data-wow-delay="0.2s">
+                        <h4>🎮 Desafio 2: Crie seu Perfil</h4>
+                        <p class="challenge-description">
+                            Crie variáveis para: seu nome, idade, curso e universidade. Depois mostre tudo usando print()!
+                        </p>
+
+                        <div class="hints-container">
+                            <button class="hint-btn cursor-pointer" data-level="1">💡 Dica 1</button>
+                            <button class="hint-btn cursor-pointer" data-level="2">💡 Dica 2</button>
+                            <button class="hint-btn cursor-pointer" data-level="3">💡 Ver Solução</button>
                         </div>
-                        <p>Crie variáveis para: seu nome, idade, curso e universidade. Depois mostre tudo!</p>
-                    </div>
 
-                    <!-- Modal Solução 2 -->
-                    <div data-modal="solucao-2" class="modal-dialog" aria-hidden="true">
-                        <div class="dialog-content">
-                            <div class="dialog-backdrop" data-modal-hide></div>
-                            <div class="dialog-inline w-600px xs-w-90">
-                                <button class="dialog-close" data-modal-hide></button>
-                                <div class="modal-popup border-rd-10 p-30-all">
-                                    <h3 class="fs-11 m-20-b">✅ Solução do Desafio 2</h3>
-                                    <div class="code-block">
-                                        <pre><code>nome = "Maria"
-idade = 19
-curso = "Engenharia"
-universidade = "PUC"
-
-print("Nome:", nome)
-print("Idade:", idade)
-print("Curso:", curso)
-print("Universidade:", universidade)</code></pre>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="hint d-none" data-level="1">
+                            Use o sinal <code>=</code> para criar variáveis. Exemplo: <code>nome = "Seu Nome"</code>
+                        </div>
+                        <div class="hint d-none" data-level="2">
+                            Lembre-se: textos vão entre aspas <code>"assim"</code>, números não precisam de aspas.
+                        </div>
+                        <div class="hint d-none" data-level="3">
+                            <strong>Solução Completa:</strong><br>
+                            <code>nome = "Maria"</code><br>
+                            <code>idade = 19</code><br>
+                            <code>curso = "Engenharia"</code><br>
+                            <code>universidade = "PUC"</code><br>
+                            <br>
+                            <code>print("Nome:", nome)</code><br>
+                            <code>print("Idade:", idade)</code><br>
+                            <code>print("Curso:", curso)</code><br>
+                            <code>print("Universidade:", universidade)</code>
                         </div>
                     </div>
 
@@ -247,35 +250,97 @@ media = (nota1 + nota2 + nota3) / 3
 print("Média:", media)</code></pre>
                     </div>
 
-                    <div class="challenge-box wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="challenge-header">
-                            <span>🎮 Desafio 3</span>
-                            <button class="toggle-btn cursor-pointer" data-modal-show="solucao-3">Ver Solução</button>
+                    <!-- SISTEMA DE HINTS PROGRESSIVOS -->
+                    <div class="challenge wow fadeInUp" data-wow-delay="0.2s">
+                        <h4>🎮 Desafio 3: Calculadora Completa</h4>
+                        <p class="challenge-description">
+                            Crie uma calculadora que faz todas as operações matemáticas (soma, subtração, multiplicação, divisão e potência) com dois números!
+                        </p>
+
+                        <div class="hints-container">
+                            <button class="hint-btn cursor-pointer" data-level="1">💡 Dica 1</button>
+                            <button class="hint-btn cursor-pointer" data-level="2">💡 Dica 2</button>
+                            <button class="hint-btn cursor-pointer" data-level="3">💡 Ver Solução</button>
                         </div>
-                        <p>Crie uma calculadora que faz todas as operações com dois números!</p>
+
+                        <div class="hint d-none" data-level="1">
+                            Crie duas variáveis: <code>numero1 = 15</code> e <code>numero2 = 3</code>
+                        </div>
+                        <div class="hint d-none" data-level="2">
+                            Use os operadores: <code>+</code> (soma), <code>-</code> (subtração), <code>*</code> (multiplicação), <code>/</code> (divisão), <code>**</code> (potência)
+                        </div>
+                        <div class="hint d-none" data-level="3">
+                            <strong>Solução Completa:</strong><br>
+                            <code>numero1 = 15</code><br>
+                            <code>numero2 = 3</code><br>
+                            <br>
+                            <code>print("Soma:", numero1 + numero2)</code><br>
+                            <code>print("Subtração:", numero1 - numero2)</code><br>
+                            <code>print("Multiplicação:", numero1 * numero2)</code><br>
+                            <code>print("Divisão:", numero1 / numero2)</code><br>
+                            <code>print("Potência:", numero1 ** numero2)</code>
+                        </div>
                     </div>
 
-                    <!-- Modal Solução 3 -->
-                    <div data-modal="solucao-3" class="modal-dialog" aria-hidden="true">
-                        <div class="dialog-content">
-                            <div class="dialog-backdrop" data-modal-hide></div>
-                            <div class="dialog-inline w-600px xs-w-90">
-                                <button class="dialog-close" data-modal-hide></button>
-                                <div class="modal-popup border-rd-10 p-30-all">
-                                    <h3 class="fs-11 m-20-b">✅ Solução do Desafio 3</h3>
-                                    <div class="code-block">
-                                        <pre><code>numero1 = 15
-numero2 = 3
+                    <!-- TESTE DE CONHECIMENTO -->
+                    <div class="quiz-container wow fadeInUp m-30-t">
+                        <h3>✅ Teste Rápido - Matemática com Python</h3>
+                        <p class="fs-7 opacity-8 m-20-b">Verifique se você entendeu os conceitos! (2 minutos)</p>
 
-print("Soma:", numero1 + numero2)
-print("Subtração:", numero1 - numero2)
-print("Multiplicação:", numero1 * numero2)
-print("Divisão:", numero1 / numero2)
-print("Potência:", numero1 ** numero2)</code></pre>
-                                    </div>
-                                </div>
+                        <div class="quiz-question">
+                            <p><strong>1. Qual operador é usado para potenciação em Python?</strong></p>
+                            <div class="quiz-option">
+                                <input type="radio" name="q1" id="q1a" value="a">
+                                <label for="q1a"><code>^</code> (circunflexo)</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" name="q1" id="q1b" value="b">
+                                <label for="q1b"><code>**</code> (dois asteriscos)</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" name="q1" id="q1c" value="c">
+                                <label for="q1c"><code>pow()</code> (função)</label>
                             </div>
                         </div>
+
+                        <div class="quiz-question">
+                            <p><strong>2. Quanto é <code>10 / 4</code> em Python?</strong></p>
+                            <div class="quiz-option">
+                                <input type="radio" name="q2" id="q2a" value="a">
+                                <label for="q2a">2</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" name="q2" id="q2b" value="b">
+                                <label for="q2b">2.5</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" name="q2" id="q2c" value="c">
+                                <label for="q2c">2.0</label>
+                            </div>
+                        </div>
+
+                        <div class="quiz-question">
+                            <p><strong>3. O que faz este código: <code>x = 5 * 3</code></strong></p>
+                            <div class="quiz-option">
+                                <input type="radio" name="q3" id="q3a" value="a">
+                                <label for="q3a">Guarda o resultado 15 na variável x</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" name="q3" id="q3b" value="b">
+                                <label for="q3b">Multiplica x por 5 e depois por 3</label>
+                            </div>
+                            <div class="quiz-option">
+                                <input type="radio" name="q3" id="q3c" value="c">
+                                <label for="q3c">Mostra 15 na tela</label>
+                            </div>
+                        </div>
+
+                        <button onclick="checkQuizAula3()" class="cursor-pointer p-10-lr p-5-tb border-rd-6 m-20-t"
+                                style="background: #10B981; color: white; border: none; font-weight: 600;">
+                            Verificar Respostas
+                        </button>
+
+                        <div id="quiz-aula3-result" class="quiz-result d-none"></div>
                     </div>
 
                     <div class="complete-check">
@@ -439,6 +504,130 @@ else:
                 </div>
             </section>
 
+            <!-- CHEAT SHEET (RESUMO) -->
+            <section id="resumo" class="aula-section wow fadeIn">
+                <div class="aula-header">
+                    <span class="aula-number">📄 Resumo</span>
+                    <h2>Cheat Sheet - Nível 1 Completo</h2>
+                </div>
+
+                <div class="aula-content">
+                    <div class="cheat-sheet wow fadeInUp">
+                        <h3>📚 Comandos Básicos - Nível 1</h3>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Comando</th>
+                                    <th>O que faz</th>
+                                    <th>Exemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>print()</code></td>
+                                    <td>Mostra algo na tela</td>
+                                    <td><code>print("Olá")</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>input()</code></td>
+                                    <td>Pede ao usuário</td>
+                                    <td><code>nome = input("Nome?")</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>int()</code></td>
+                                    <td>Converte para inteiro</td>
+                                    <td><code>int("5")</code> → 5</td>
+                                </tr>
+                                <tr>
+                                    <td><code>float()</code></td>
+                                    <td>Converte para decimal</td>
+                                    <td><code>float("3.14")</code> → 3.14</td>
+                                </tr>
+                                <tr>
+                                    <td><code>str()</code></td>
+                                    <td>Converte para texto</td>
+                                    <td><code>str(10)</code> → "10"</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="m-30-t m-15-b">🔢 Operadores Matemáticos</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Operador</th>
+                                    <th>Operação</th>
+                                    <th>Exemplo</th>
+                                    <th>Resultado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>+</code></td>
+                                    <td>Soma</td>
+                                    <td><code>5 + 3</code></td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td><code>-</code></td>
+                                    <td>Subtração</td>
+                                    <td><code>10 - 4</code></td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td><code>*</code></td>
+                                    <td>Multiplicação</td>
+                                    <td><code>6 * 7</code></td>
+                                    <td>42</td>
+                                </tr>
+                                <tr>
+                                    <td><code>/</code></td>
+                                    <td>Divisão</td>
+                                    <td><code>20 / 4</code></td>
+                                    <td>5.0</td>
+                                </tr>
+                                <tr>
+                                    <td><code>**</code></td>
+                                    <td>Potência</td>
+                                    <td><code>2 ** 3</code></td>
+                                    <td>8</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="m-30-t m-15-b">📦 Variáveis - Regras Importantes</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>✅ PODE</th>
+                                    <th>❌ NÃO PODE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>meu_nome</code></td>
+                                    <td><code>meu nome</code> (sem espaço)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>idade_pessoa</code></td>
+                                    <td><code>2idade</code> (começa com número)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>pontos_jogo</code></td>
+                                    <td><code>idade-pessoa</code> (usa hífen)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="text-center m-30-t p-20-all border-rd-8" style="background: rgba(59, 130, 246, 0.1);">
+                            <p class="fs-9 fw-700" style="color: #3B82F6;">🎉 Você dominou os fundamentos!</p>
+                            <p class="fs-7 opacity-8 m-10-t">Pronto para o Projeto Final!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Projeto Final -->
             <section id="projeto" class="aula-section projeto-section wow bounceIn">
                 <div class="aula-header">
@@ -529,5 +718,44 @@ print("FIM! 🎉")</code></pre>
     <script src="js/modal-init.js"></script>
     <script src="js/nivel.js"></script>
     <script src="js/effects.js"></script>
+    <script src="js/melhorias-interativas.js"></script>
+
+    <!-- Quiz Scripts -->
+    <script>
+        function checkQuizAula3() {
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            const q2 = document.querySelector('input[name="q2"]:checked');
+            const q3 = document.querySelector('input[name="q3"]:checked');
+            const result = document.getElementById('quiz-aula3-result');
+
+            if (!q1 || !q2 || !q3) {
+                showToast('⚠️ Responda todas as questões!', 'warning');
+                return;
+            }
+
+            let correct = 0;
+            if (q1.value === 'b') correct++; // ** é o operador correto
+            if (q2.value === 'b') correct++; // 10/4 = 2.5
+            if (q3.value === 'a') correct++; // Guarda o resultado
+
+            result.classList.remove('d-none');
+            result.innerHTML = `
+                <div class="fs-10 m-10-b">Você acertou ${correct}/3 questões!</div>
+                ${correct === 3 ?
+                    '<div class="fs-9">🎉 Perfeito! Você dominou esta aula!</div>' :
+                correct === 2 ?
+                    '<div class="fs-7">😊 Muito bem! Só mais um pouquinho de prática!</div>' :
+                    '<div class="fs-7">💪 Continue estudando! Você consegue!</div>'
+                }
+            `;
+
+            if (correct === 3) {
+                showToast('🎉 Quiz perfeito! Parabéns!', 'success');
+                achievements.unlock('perfeccionista');
+            } else {
+                showToast(`Você acertou ${correct}/3 questões!`, 'info');
+            }
+        }
+    </script>
 </body>
 </html>

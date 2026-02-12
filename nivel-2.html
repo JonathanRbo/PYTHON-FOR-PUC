@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nível 2 - Intermediário | Python for PUC</title>
+    <!-- Squeleton Framework -->
+    <link rel="stylesheet" href="https://cdn.squeleton.dev/squeleton.v4.min.css">
+    <script src="https://cdn.squeleton.dev/squeleton-main.v4.min.js"></script>
+
+    <!-- Projeto Styles -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nivel.css">
     <link rel="stylesheet" href="css/effects.css">
     <link rel="stylesheet" href="css/modal-fix.css">
     <link rel="stylesheet" href="css/ux-fixes.css">
+    <link rel="stylesheet" href="css/melhorias-componentes.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.squeleton.dev/squeleton.v4.min.css">
-    <script src="https://cdn.squeleton.dev/squeleton-main.v4.min.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -190,12 +194,38 @@ else:
                         </div>
                     </div>
 
-                    <div class="challenge-box wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="challenge-header">
-                            <span>🎮 Desafio 2</span>
-                            <button class="toggle-btn cursor-pointer" data-modal-show="solucao-elif">Ver Solução</button>
+                    <!-- SISTEMA DE HINTS PROGRESSIVOS -->
+                    <div class="challenge wow fadeInUp" data-wow-delay="0.3s">
+                        <h4>🎮 Desafio 2: Classificador de Idade</h4>
+                        <p class="challenge-description">
+                            Crie um programa que classifica a idade em: Criança (0-12), Adolescente (13-17), Adulto (18-59), Idoso (60+)
+                        </p>
+
+                        <div class="hints-container">
+                            <button class="hint-btn cursor-pointer" data-level="1">💡 Dica 1</button>
+                            <button class="hint-btn cursor-pointer" data-level="2">💡 Dica 2</button>
+                            <button class="hint-btn cursor-pointer" data-level="3">💡 Ver Solução</button>
                         </div>
-                        <p>Crie um programa que classifica a idade: Criança (0-12), Adolescente (13-17), Adulto (18-59), Idoso (60+)</p>
+
+                        <div class="hint d-none" data-level="1">
+                            Use <code>if</code>, <code>elif</code> e <code>else</code> para comparar a idade com os limites.
+                        </div>
+                        <div class="hint d-none" data-level="2">
+                            Comece com <code>if idade <= 12:</code>, depois <code>elif idade <= 17:</code>, etc.
+                        </div>
+                        <div class="hint d-none" data-level="3">
+                            <strong>Solução Completa:</strong><br>
+                            <code>idade = int(input("Digite sua idade: "))</code><br>
+                            <br>
+                            <code>if idade <= 12:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;print("👶 Você é uma criança!")</code><br>
+                            <code>elif idade <= 17:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;print("🧒 Você é um adolescente!")</code><br>
+                            <code>elif idade <= 59:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;print("👨 Você é um adulto!")</code><br>
+                            <code>else:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;print("👴 Você é um idoso!")</code>
+                        </div>
                     </div>
 
                     <div class="complete-check">
@@ -810,5 +840,6 @@ print(f"📋 Classificação: {classificacao}")</code></pre>
     <script src="js/effects.js"></script>
     <script src="https://cdn.squeleton.dev/squeleton-scripts.v4.min.js"></script>
     <script src="js/modal-init.js"></script>
+    <script src="js/melhorias-interativas.js"></script>
 </body>
 </html>

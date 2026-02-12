@@ -168,13 +168,19 @@ class AchievementSystem {
     }
 
     showAchievementModal(achievement) {
+        // Remover modal anterior se existir
+        const existingModal = document.querySelector('[data-modal="achievement-modal"]');
+        if (existingModal) {
+            existingModal.remove();
+        }
+
         // Criar modal dinamicamente
         const modalHTML = `
             <div data-modal="achievement-modal" class="modal-dialog" aria-hidden="false">
                 <div class="dialog-content">
-                    <div class="dialog-backdrop" data-modal-hide></div>
+                    <div class="dialog-backdrop"></div>
                     <div class="dialog-inline w-400px xs-w-90">
-                        <div class="modal-popup border-rd-10 p-30-all text-center">
+                        <div class="modal-popup border-rd-10 p-30-all text-center" style="background: #1E293B;">
                             <div class="fs-16 m-20-b animated bounceIn">${achievement.icon}</div>
                             <h3 class="fs-11 fw-700 m-10-b animated fadeInUp" data-wow-delay="0.2s">
                                 Conquista Desbloqueada!
@@ -185,7 +191,9 @@ class AchievementSystem {
                             <p class="fs-7 opacity-8 m-20-b animated fadeInUp" data-wow-delay="0.4s">
                                 ${achievement.description}
                             </p>
-                            <button data-modal-hide class="cursor-pointer p-10-lr p-5-tb border-rd-6 animated fadeInUp" data-wow-delay="0.5s">
+                            <button id="achievement-continue" class="cursor-pointer p-10-lr p-5-tb border-rd-6 animated fadeInUp"
+                                    style="background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%); color: white; border: none; font-weight: 600;"
+                                    data-wow-delay="0.5s">
                                 Continuar
                             </button>
                         </div>
@@ -194,16 +202,40 @@ class AchievementSystem {
             </div>
         `;
 
-        // Inserir no body se não existir
-        if (!document.querySelector('[data-modal="achievement-modal"]')) {
-            document.body.insertAdjacentHTML('beforeend', modalHTML);
-        }
+        // Inserir no body
+        document.body.insertAdjacentHTML('beforeend', modalHTML);
 
         // Abrir modal após pequeno delay
         setTimeout(() => {
             const modal = document.querySelector('[data-modal="achievement-modal"]');
             modal.setAttribute('aria-hidden', 'false');
             modal.classList.add('modal-show');
+
+            // Adicionar event listeners para fechar o modal
+            const closeBtn = document.getElementById('achievement-continue');
+            const backdrop = modal.querySelector('.dialog-backdrop');
+
+            const closeModal = () => {
+                modal.classList.remove('modal-show');
+                modal.setAttribute('aria-hidden', 'true');
+                setTimeout(() => modal.remove(), 300);
+            };
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeModal);
+            }
+
+            if (backdrop) {
+                backdrop.addEventListener('click', closeModal);
+            }
+
+            // Fechar com ESC
+            document.addEventListener('keydown', function escHandler(e) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                    document.removeEventListener('keydown', escHandler);
+                }
+            });
         }, 100);
 
         // Confetes

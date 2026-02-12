@@ -23,15 +23,15 @@
     --text-secondary: #94A3B8;
     --text-muted: #64748B;
 
-    /* Cores dos níveis - tons de azul */
+    /* Cores dos níveis - Padronizado - MESMA COR */
     --nivel-1: #3B82F6;
-    --nivel-2: #2563EB;
-    --nivel-3: #1E40AF;
+    --nivel-2: #3B82F6;
+    --nivel-3: #3B82F6;
 
-    /* Gradientes - tons de azul */
+    /* Gradientes - Padronizado - MESMA COR */
     --gradient-1: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
-    --gradient-2: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
-    --gradient-3: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
+    --gradient-2: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+    --gradient-3: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
 
     /* Sombras */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -470,16 +470,11 @@ section {
     opacity: 1;
 }
 
-.level-card.nivel-1::before {
-    background: linear-gradient(90deg, var(--nivel-1), #60A5FA);
-}
-
-.level-card.nivel-2::before {
-    background: linear-gradient(90deg, var(--nivel-2), #3B82F6);
-}
-
+/* Padronizado - MESMA COR para todos os níveis */
+.level-card.nivel-1::before,
+.level-card.nivel-2::before,
 .level-card.nivel-3::before {
-    background: linear-gradient(90deg, var(--nivel-3), #2563EB);
+    background: linear-gradient(90deg, #3B82F6, #2563EB);
 }
 
 .level-card.featured {

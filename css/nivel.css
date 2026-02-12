@@ -7,16 +7,11 @@
     overflow: hidden;
 }
 
-.nivel-1-header {
-    background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
-}
-
-.nivel-2-header {
-    background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
-}
-
+/* Padronizado - MESMA COR para todos os níveis */
+.nivel-1-header,
+.nivel-2-header,
 .nivel-3-header {
-    background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+    background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
 }
 
 .header-content {
@@ -253,7 +248,7 @@
 }
 
 .copy-btn.copied {
-    background: var(--nivel-1);
+    background: #10B981; /* Verde de sucesso */
 }
 
 .code-block pre {
@@ -281,21 +276,10 @@
     border: 1px solid;
 }
 
-.info-box {
-    background: rgba(59, 130, 246, 0.1);
-    border-color: #3B82F6;
-}
-
-.tip-box {
-    background: rgba(96, 165, 250, 0.1);
-    border-color: #60A5FA;
-}
-
-.warning-box {
-    background: rgba(37, 99, 235, 0.15);
-    border-color: #2563EB;
-}
-
+/* Padronizado - MESMA COR para todos os boxes */
+.info-box,
+.tip-box,
+.warning-box,
 .success-box {
     background: rgba(59, 130, 246, 0.1);
     border-color: #3B82F6;
@@ -337,10 +321,10 @@
     margin-bottom: 0.5rem;
 }
 
-/* Challenge box */
+/* Challenge box - Padronizado */
 .challenge-box {
-    background: rgba(37, 99, 235, 0.1);
-    border: 1px solid var(--secondary);
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid #3B82F6;
     border-radius: 0.75rem;
     padding: 1.5rem;
 }
